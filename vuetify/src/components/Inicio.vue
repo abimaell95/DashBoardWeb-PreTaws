@@ -17,14 +17,15 @@
       <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">Países</h2>
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in paises"
+        <v-row justify="center">     
+      <a
+            v-for="(link, i) in paises"
             :key="i"
-            :href="next.href"
+            :href="link.href"
             class="subheading mx-3"
             target="_blank"
-          >{{ next.text }}</a>
+          >{{ link.text }}</a>
+      
         </v-row>
       </v-col>
 
@@ -76,16 +77,16 @@ export default {
     ],
     paises: [
       {
-        text: "Explore components",
-        href: "https://vuetifyjs.com/components/api-explorer"
+        text: "Ecuador",
+        href: "../assets/ecuador.png"
       },
       {
-        text: "Select a layout",
-        href: "https://vuetifyjs.com/layout/pre-defined"
+        text: "Venezuela",
+        href: "../assets/venezuela.png"
       },
       {
-        text: "Frequently Asked Questions",
-        href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
+        text: "México",
+        href: "../assets/ecuador.png"
       }
     ]
   })
