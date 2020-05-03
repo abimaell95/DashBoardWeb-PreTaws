@@ -49,7 +49,7 @@
                               </v-list-item-icon>
                               <v-list-item-content>
                                   <v-list-item-title> 
-                                <router-link to="/about" class="white--text" >Bar Chart</router-link>
+                                <router-link to="/bar" class="white--text" >Bar Chart</router-link>
                                   </v-list-item-title>
                               </v-list-item-content>
                             </v-list-item>
@@ -59,7 +59,7 @@
                               </v-list-item-icon>
                               <v-list-item-content>
                                 <v-list-item-title>                     
-                                  <router-link to="/about" class="white--text" >Pie Chart</router-link>
+                                  <router-link to="/pie" class="white--text" >Pie Chart</router-link>
                         </v-list-item-title>
                               </v-list-item-content>
                             </v-list-item>
@@ -69,7 +69,7 @@
                         </v-list-item-icon>
                         <v-list-item-content>
                           <v-list-item-title>                      
-                            <router-link to="/about" class="white--text" >Timeseries Chart</router-link>
+                            <router-link to="/time" class="white--text" >Timeseries Chart</router-link>
                       </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
@@ -79,7 +79,7 @@
                         </v-list-item-icon>
                         <v-list-item-content>
                           <v-list-item-title>  
-                            <router-link to="/botones" class="white--text" >Radar Chart</router-link>
+                            <router-link to="/radar" class="white--text" >Radar Chart</router-link>
                       </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
