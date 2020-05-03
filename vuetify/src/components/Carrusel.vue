@@ -27,25 +27,19 @@
       return {
         colors: [
           'indigo',
-          'warning',
           'pink darken-2',
-          'red lighten-1',
           'deep-purple accent-4',
         ],
         slides: [
           'Publications',
           'Second',
           'Third',
-          'Fourth',
-          'Fifth',
+
         ],
         amount:[
           '100',
           '200',
           '300',
-          '400',
-          '500',
-
         ]
       }
     },
