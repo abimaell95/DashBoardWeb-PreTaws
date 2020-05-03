@@ -136,7 +136,8 @@
     
     data () {
       return{
-        drawer:true
+        drawer:true,
+        items:[]
       }
     }
   }

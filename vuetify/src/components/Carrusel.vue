@@ -5,7 +5,7 @@
     <v-carousel cycle height="15ñ0" hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-sheet :color="colors[i]" height="100%">
-        <v-row class="fill-height ml-5" align="center">
+        <v-row class="fill-height ml-5" justify="center">
           <div >
             <p class="display-2 text-right">
             {{ slide }} 
@@ -31,9 +31,9 @@
           'deep-purple accent-4',
         ],
         slides: [
-          'Publications',
-          'Second',
-          'Third',
+          'Ecuador',
+          'Venezuela',
+          'Mexico',
 
         ],
         amount:[

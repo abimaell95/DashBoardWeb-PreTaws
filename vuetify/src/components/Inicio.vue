@@ -10,15 +10,16 @@
 
         <p class="subheading font-weight-regular">
           Bienvenido al dashboar de noticias relevantes en algunos
-          <br />países de America Latina</p>
+          <br />países de America Latina
+        </p>
       </v-col>
 
       <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-3">What's next?</h2>
+        <h2 class="headline font-weight-bold mb-3">Países</h2>
 
         <v-row justify="center">
           <a
-            v-for="(next, i) in whatsNext"
+            v-for="(next, i) in paises"
             :key="i"
             :href="next.href"
             class="subheading mx-3"
@@ -41,19 +42,7 @@
         </v-row>
       </v-col>
 
-      <v-col class="mb-5" cols="12">
-        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >{{ eco.text }}</a>
-        </v-row>
-      </v-col>
+      
     </v-row>
   </v-container>
 </template>
@@ -63,20 +52,6 @@ export default {
   name: "Inicio",
 
   data: () => ({
-    ecosystem: [
-      {
-        text: "vuetify-loader",
-        href: "https://github.com/vuetifyjs/vuetify-loader"
-      },
-      {
-        text: "github",
-        href: "https://github.com/vuetifyjs/vuetify"
-      },
-      {
-        text: "awesome-vuetify",
-        href: "https://github.com/vuetifyjs/awesome-vuetify"
-      }
-    ],
     importantLinks: [
       {
         text: "Documentation",
@@ -99,7 +74,7 @@ export default {
         href: "https://medium.com/vuetify"
       }
     ],
-    whatsNext: [
+    paises: [
       {
         text: "Explore components",
         href: "https://vuetifyjs.com/components/api-explorer"
