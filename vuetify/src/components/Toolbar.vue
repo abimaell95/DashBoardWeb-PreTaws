@@ -7,9 +7,10 @@
       
     </v-toolbar>
     <v-navigation-drawer app v-model="drawer" dark temporary>
-        <v-row class="mb-3 mt-3 ml-3" >
-            <v-avatar color="indigo">
-              <v-icon dark>mdi-account-circle</v-icon>
+        <v-row class="mb-6 mt-6 ml-12" >
+            <v-avatar size=150>
+                 <img
+                src="../assets/taws.png"  alt="Taws" height="150" >
             </v-avatar>
         </v-row>
 
