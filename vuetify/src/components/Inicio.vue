@@ -10,12 +10,7 @@
 
         <p class="subheading font-weight-regular">
           Bienvenido al dashboar de noticias relevantes en algunos
-          <br />países de America Latina
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
+          <br />países de America Latina</p>
       </v-col>
 
       <v-col class="mb-5" cols="12">
