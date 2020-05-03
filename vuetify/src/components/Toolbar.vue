@@ -1,145 +1,145 @@
-<template>
-  <v-card flat height="100px" tile >
-    <v-toolbar dense>
-      
-      <v-app-bar-nav-icon  @click="drawer =! drawer"></v-app-bar-nav-icon>
-      <v-spacer></v-spacer>
-      
-    </v-toolbar>
-    <v-navigation-drawer app v-model="drawer" dark temporary>
-        <v-row class="mb-6 mt-6 ml-12" >
-            <v-avatar size=150>
+<template >
+<div id="app">
+  <v-app id="inspire">
+    <v-navigation-drawer dark v-model="drawer" app>
+        <v-row class="mb-3 mt-3 ml-3" >
+           <v-avatar size=150>
                  <img
                 src="../assets/taws.png"  alt="Taws" height="150" >
             </v-avatar>
         </v-row>
 
+        <v-expansion-panels focusable>
+            <v-expansion-panel >
+                <v-expansion-panel-header > 
+                    <v-icon >mdi-graph</v-icon> Types of Graph
+                </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                    <v-list>
+                        <v-list-item-group v-model="model">
+                            <v-list-item
+                            v-for="(item, i) in items"
+                            :key="i"
+                            >
+                            <v-list-item-icon>
+                                <v-icon v-text="item.icon"></v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                   <v-list-item-title >
+                                      <router-link class="white--text" v-text="item.text" ></router-link>
 
-
-
-
-        <v-expansion-panels>
-          <v-expansion-panel>
-            <v-expansion-panel-header>
-               <v-icon>mdi-graph</v-icon>
-               Types of Chart</v-expansion-panel-header>
-              <v-expansion-panel-content>
-                <v-list>
-                  <v-list-item-group v-model="model">
-                    <v-list-item
-                      v-for="(item, i) in items"
-                      :key="i"
-                    >
-                    <v-list-item-icon>
-                      <v-icon v-text="item.icon"></v-icon>
-                    </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title v-text="item.text"></v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list-item-group>
-
-                </v-list>
-
-
-                <v-list>
-                          <v-list-item-group >
-                            <v-list-item>
-                              <v-list-item-icon>
-                                <v-icon>mdi-chart-bar</v-icon>
-                              </v-list-item-icon>
-                              <v-list-item-content>
-                                  <v-list-item-title> 
-                                <router-link to="/bar" class="white--text" >Bar Chart</router-link>
-                                  </v-list-item-title>
-                              </v-list-item-content>
+                                   </v-list-item-title>
+                            </v-list-item-content>
                             </v-list-item>
-                            <v-list-item>
-                              <v-list-item-icon>
-                                <v-icon>mdi-chart-pie</v-icon>
-                              </v-list-item-icon>
-                              <v-list-item-content>
-                                <v-list-item-title>                     
-                                  <router-link to="/pie" class="white--text" >Pie Chart</router-link>
-                        </v-list-item-title>
-                              </v-list-item-content>
-                            </v-list-item>
-                      <v-list-item>
-                        <v-list-item-icon>
-                          <v-icon>mdi-chart-timeline-variant</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-content>
-                          <v-list-item-title>                      
-                            <router-link to="/time" class="white--text" >Timeseries Chart</router-link>
-                      </v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                      <v-list-item>
-                        <v-list-item-icon>
-                          <v-icon>mdi-radar</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-content>
-                          <v-list-item-title>  
-                            <router-link to="/radar" class="white--text" >Radar Chart</router-link>
-                      </v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-list-item-group>
-                </v-list>
-              </v-expansion-panel-content>
-          </v-expansion-panel>
+                        </v-list-item-group>
+                        </v-list>
 
-            <v-expansion-panel>
-                    <v-expansion-panel-header>
-                      <v-icon>mdi-account-group</v-icon>Social Media</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-              <v-list>
-                  <v-list-item-group >
-                    <v-list-item>
-                      <v-list-item-icon>
-                        <v-icon>mdi-facebook</v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content>
-                        <v-list-item-title>Facebook</v-list-item-title>
-                      </v-list-item-content>
-                    </v-list-item>
-                    <v-list-item>
-                      <v-list-item-icon>
-                        <v-icon>mdi-twitter</v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content>
-                        <v-list-item-title>Twitter</v-list-item-title>
-                      </v-list-item-content>
-                    </v-list-item>
-                    <v-list-item>
-                      <v-list-item-icon>
-                        <v-icon>mdi-instagram</v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content>
-                        <v-list-item-title>Instagram</v-list-item-title>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-list-item-group>
-                </v-list>
-              </v-expansion-panel-content>
-          
-          </v-expansion-panel>
+                </v-expansion-panel-content>
+                </v-expansion-panel>
+                <v-expansion-panel >
+                <v-expansion-panel-header > 
+                    <v-icon >mdi-account-group</v-icon>
+                    Social Media
+                </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                    <v-list>
+                        <v-list-item-group v-model="model">
+                            <v-list-item
+                            v-for="(item, i) in itemssm"
+                            :key="i"
+                            >
+                            <v-list-item-icon>
+                                <v-icon v-text="item.icon"></v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title v-text="item.text"></v-list-item-title>
+                            </v-list-item-content>
+                            </v-list-item>
+                        </v-list-item-group>
+                        </v-list>
+
+                </v-expansion-panel-content>
+                </v-expansion-panel>
         </v-expansion-panels>
+    </v-navigation-drawer>
 
-  </v-navigation-drawer>
-  </v-card>
+    <v-app-bar app color="indigo" dark>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    </v-app-bar>
+
+    <v-content>
+     <Inicio/>
+     <Carrusel/>
+     
+    </v-content>
+    <v-footer
+      color="indigo"
+      app
+    >
+      <span class="white--text">&copy; 2019</span>
+    </v-footer>
+  </v-app>
+</div>
   
 </template>
 
+
+
+
+
+
+
 <script>
+import Inicio from '@/components/Inicio.vue'
+import Carrusel from '@/components/Carrusel.vue'
+
   export default {
+      components: {
+          Inicio,Carrusel
+      },
     
-    data () {
-      return{
-        drawer:true,
-        items:[]
-      }
-    }
+   data: () => ({
+    drawer: null,
+    itemssm: [
+        {
+          icon: 'mdi-facebook',
+          text: 'Facebook',
+        },
+        {
+          icon: 'mdi-twitter',
+          text: 'Twitter',
+        },
+        {
+          icon: 'mdi-instagram',
+          text: 'Instagram',
+        }
+      ],
+      items: [
+        {
+          icon: 'mdi-chart-bar',
+          text: 'Bar',
+          ruta: '/bar'
+        },
+        {
+          icon: 'mdi-chart-pie',
+          text: 'Pie',
+          ruta: '/pie'
+        },
+        {
+          icon: 'mdi-chart-timeline-variant',
+          text: 'Timeseries',
+          ruta: '/pie'
+        },
+        {
+          icon: 'mdi-radar',
+          text: 'Radar',
+          ruta: '/bar'
+        },
+      ],
+    names : [ {texto: 'Types of Chart',
+                icono:'mdi-graph'},{texto:"Social Media" ,icono:'mdi-account-group'}],
+      model: 1,
+    }),
+  
   }
 </script>
-

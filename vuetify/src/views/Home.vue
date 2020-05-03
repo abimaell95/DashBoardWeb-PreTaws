@@ -1,8 +1,6 @@
 <template>
   <div>
     <Toolbar />
-    <Inicio />
-    <Carrusel />
   </div>
 </template>
 
