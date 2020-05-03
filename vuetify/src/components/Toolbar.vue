@@ -1,5 +1,5 @@
 <template>
-  <v-card flat height="50px" tile >
+  <v-card flat height="100px" tile >
     <v-toolbar dense>
       
       <v-app-bar-nav-icon  @click="drawer =! drawer"></v-app-bar-nav-icon>
