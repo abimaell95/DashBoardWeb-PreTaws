@@ -34,7 +34,7 @@
     <br>
         <v-row justify="center">
           <a
-            v-for="(link, i) in paises"
+            v-for="(link, i) in temas"
             :key="i"
             class="subheading mx-3"
             target="_blank"
@@ -52,7 +52,7 @@ export default {
   name: "Home",
 
   data: () => ({
-    paises: [ "Crimen","Política","Corrupcion",
+    temas: [ "Crimen","Política","Corrupcion",
     "Salud","Religion", 'Desempleo', 'Educación'
     ],
     paises: [
