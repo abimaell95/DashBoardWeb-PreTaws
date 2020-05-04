@@ -1,8 +1,6 @@
 <template>
   <div>
-    <Toolbar />
-
-    <Carrusel />
+    <h1>HOLA COMO ESTAS -BAR</h1>
   </div>
 </template>
 
@@ -56,7 +54,7 @@ export default {
 
 
 <script>
-import Inicio from "@/components/Inicio.vue";
+
 import Toolbar from "@/components/Toolbar.vue";
 import Carrusel from "@/components/Carrusel.vue";
 export default {
@@ -64,7 +62,6 @@ export default {
   components: {
     Toolbar,
     Carrusel,
-    Inicio
   }
 };
 </script>

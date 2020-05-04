@@ -1,7 +1,5 @@
 <template>
       <div>
-    <router-view></router-view>
-
     <v-carousel cycle height="15ñ0" hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item v-for="(slide, i) in slides" :key="i">
       <v-sheet :color="colors[i]" height="100%">

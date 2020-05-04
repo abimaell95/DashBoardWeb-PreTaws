@@ -1,6 +1,9 @@
 <template>
-  <v-app>  
-  <router-view></router-view>
+  <v-app> 
+        <Toolbar /> 
+    <router-view></router-view> 
+
+    <Carrusel />
     </v-app>
 </template>
 
