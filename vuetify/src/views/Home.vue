@@ -1,11 +1,11 @@
 <template>
-  <v-container>
+  <v-container >
     <v-row class="text-center">
       <v-col cols="12">
         <v-img :src="require('../assets/taws.png')" class="my-3" contain height="200" />
       </v-col>
 
-      <v-col class="mb-4">
+      <v-col class="mb-4" cols="12" sm="6" offset-sm="3">
         <h1 class="display-2 font-weight-bold mb-3"></h1>
 
         <p class="subheading font-weight-regular">
@@ -14,13 +14,26 @@
         </p>
       </v-col>
 
-      <v-col class="mb-5" cols="12">
+      <v-col class="mb-0" cols="6" sm="6" offset-sm="3">
         <h2 class="headline font-weight-bold mb-3">Países</h2>
-      	
-        <v-row justify="center" >    
-        <img v-for="(pais, i) in paises" :key="i"
-        v-bind:src="pais.href" v-bind:alt="pic"  class="my-3" contain height="100"/> 
-        </v-row>
+         <v-row justify="center" >
+              <v-col sm="4">
+                <v-img :src="require('../assets/Mexico.png')" class="my-3" contain height="100">
+                </v-img>
+              </v-col>
+
+              <v-col sm="4">
+                <v-img :src="require('../assets/Ecuador.png')" class="my-3" contain height="100">       
+                </v-img>
+              </v-col>
+
+              <v-col sm="4">
+               <v-img :src="require('../assets/Venezuela.png')" class="my-3" contain height="100">
+               </v-img>
+              </v-col>
+                
+          
+         </v-row>
       </v-col>
       <br>
       <v-col class="mb-5" cols="12">
