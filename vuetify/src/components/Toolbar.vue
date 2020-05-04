@@ -17,16 +17,14 @@
                 <v-expansion-panel-content>
                     <v-list>
                         <v-list-item-group v-model="model">
-                            <v-list-item
-                            v-for="(item, i) in items"
-                            :key="i"
-                            >
+                          
+                          <v-list-item v-for="(item, i) in items" :key="i">
                             <v-list-item-icon>
                                 <v-icon v-text="item.icon"></v-icon>
                             </v-list-item-icon>
                             <v-list-item-content>
                                    <v-list-item-title >
-                                      <router-link class="white--text" v-text="item.text" ></router-link>
+                                      <router-link class="white--text" :to="item.rutas" > {{item.text}}</router-link>
 
                                    </v-list-item-title>
                             </v-list-item-content>
@@ -104,10 +102,12 @@ import Carrusel from '@/components/Carrusel.vue'
         {
           icon: 'mdi-facebook',
           text: 'Facebook',
+         
         },
         {
           icon: 'mdi-twitter',
           text: 'Twitter',
+          
         },
         {
           icon: 'mdi-instagram',
@@ -118,25 +118,28 @@ import Carrusel from '@/components/Carrusel.vue'
         {
           icon: 'mdi-chart-bar',
           text: 'Bar',
-          ruta: '/bar'
+           rutas:'/bar'
+          
         },
         {
           icon: 'mdi-chart-pie',
           text: 'Pie',
-          ruta: '/pie'
+          rutas:'/pie'
         },
         {
           icon: 'mdi-chart-timeline-variant',
           text: 'Timeseries',
-          ruta: '/pie'
+          rutas:'/time'
+
         },
         {
           icon: 'mdi-radar',
           text: 'Radar',
-          ruta: '/bar'
+          rutas:'/radar'
+
         },
       ],
-    names : [ {texto: 'Types of Chart',
+      names : [ {texto: 'Types of Chart',
                 icono:'mdi-graph'},{texto:"Social Media" ,icono:'mdi-account-group'}],
       model: 1,
     }),

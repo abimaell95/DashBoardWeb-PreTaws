@@ -29,6 +29,11 @@ Vue.use(VueRouter)
     path: '/time',
     name: 'time',
    component: () => import('../views/Time.vue')
+  },
+  {
+    path: '/radar',
+    name: 'radar',
+   component: () => import('../views/Radar.vue')
   }
 ]
 
