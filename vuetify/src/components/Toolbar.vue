@@ -64,6 +64,12 @@
     <v-app-bar app color="indigo" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
+
+    <v-content>
+     <Inicio/>
+     <Carrusel/>
+     
+    </v-content>
     <v-footer
       color="indigo"
       app
@@ -82,11 +88,12 @@
 
 
 <script>
+import Inicio from '@/components/Inicio.vue'
 import Carrusel from '@/components/Carrusel.vue'
 
   export default {
       components: {
-          Carrusel
+          Inicio,Carrusel
       },
     
    data: () => ({
