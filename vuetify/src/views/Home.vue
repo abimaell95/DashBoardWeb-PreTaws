@@ -34,7 +34,7 @@
     <br>
         <v-row justify="center">
           <a
-            v-for="(link, i) in importantLinks"
+            v-for="(link, i) in paises"
             :key="i"
             class="subheading mx-3"
             target="_blank"
@@ -52,7 +52,7 @@ export default {
   name: "Home",
 
   data: () => ({
-    importantLinks: [ "Crimen","Política","Corrupcion",
+    paises: [ "Crimen","Política","Corrupcion",
     "Salud","Religion", 'Desempleo', 'Educación'
     ],
     paises: [
