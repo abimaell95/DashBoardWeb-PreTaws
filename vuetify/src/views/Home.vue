@@ -17,15 +17,9 @@
       <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">Países</h2>
       	
-        <v-row justify="center">     
-      <a
-            v-for="(link, i) in paises"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >{{ link.text }}</a>
-      
+        <v-row justify="center" >    
+        <img v-for="(pais, i) in paises" :key="i"
+        v-bind:src="pais.href" v-bind:alt="pic"  class="my-3" contain height="100"/> 
         </v-row>
       </v-col>
       <br>
@@ -33,6 +27,8 @@
         <h2 class="headline font-weight-bold mb-3">Tópicos</h2>
     <br>
         <v-row justify="center">
+    
+
           <a
             v-for="(link, i) in temas"
             :key="i"
@@ -58,15 +54,15 @@ export default {
     paises: [
       {
         text: "Ecuador",
-        href: "../assets/ecuador.png"
+        href: "../assets/taws.png"
       },
       {
         text: "Venezuela",
-        href: "../assets/venezuela.png"
+        href: "../assets/taws.png"
       },
       {
         text: "México",
-        href: "../assets/ecuador.png"
+        href: "../assets/taws.png"
       }
     ]
   })
