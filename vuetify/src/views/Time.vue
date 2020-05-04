@@ -1,22 +1,7 @@
 <template>
   <div>
-    <Toolbar />
-    <h1>Linea de Tiempo</h1>
-    <Carrusel />
+
+    <h1>Pie Chart</h1>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nulla ullam voluptates dolorum iure sint natus commodi in, doloribus nam illo officiis, consequatur blanditiis fuga odit voluptatum enim quia est.</p>
   </div>
 </template>
-
-
-<script>
-import Inicio from "@/components/Inicio.vue";
-import Toolbar from "@/components/Toolbar.vue";
-import Carrusel from "@/components/Carrusel.vue";
-export default {
-  name: "Home",
-  components: {
-    Toolbar,
-    Carrusel,
-    Inicio
-  }
-};
-</script>

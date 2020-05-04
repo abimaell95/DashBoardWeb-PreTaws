@@ -1,15 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
-  const routes = [
-  {
+  const routes = [{
     path: '/',
     name: 'Home',
-    component: Home
-
-  },  
+    component: () => import('../views/Home.vue')
+  },
   {
     path: '/botones',
     name: 'botones',
@@ -22,8 +19,8 @@ Vue.use(VueRouter)
   },
   {
     path: '/pie',
-    name: 'radar',
-   component: () => import('../views/Radar.vue')
+    name: 'pie',
+   component: () => import('../views/Pie.vue')
   },
   {
     path: '/time',

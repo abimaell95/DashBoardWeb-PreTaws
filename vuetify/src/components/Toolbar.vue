@@ -1,6 +1,8 @@
 <template >
-<div id="app">
+<div >
+  
   <v-app id="inspire">
+     <router-view></router-view>  
     <v-navigation-drawer dark v-model="drawer" app>
         <v-row class="mb-3 mt-3 ml-3" >
            <v-avatar size=150>
@@ -65,15 +67,8 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-content>
-     <Inicio/>
-     <Carrusel/>
-     
-    </v-content>
     <v-footer
-      color="indigo"
-      app
-    >
+      color="indigo"  app >
       <span class="white--text">&copy; 2019</span>
     </v-footer>
   </v-app>
@@ -83,19 +78,9 @@
 
 
 
-
-
-
-
 <script>
-import Inicio from '@/components/Inicio.vue'
-import Carrusel from '@/components/Carrusel.vue'
-
   export default {
-      components: {
-          Inicio,Carrusel
-      },
-    
+
    data: () => ({
     drawer: null,
     itemssm: [

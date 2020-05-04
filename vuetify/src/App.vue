@@ -1,7 +1,16 @@
 <template>
-  <v-app>  
-  <router-view></router-view>
-    </v-app>
+
+  <v-app>
+    <div> 
+           
+              <Toolbar />              
+                   
+              <Carrusel />
+      
+    </div>
+  </v-app>
+ 
+
 </template>
 
 <script>
