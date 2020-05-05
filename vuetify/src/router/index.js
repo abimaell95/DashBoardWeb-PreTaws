@@ -13,9 +13,9 @@ Vue.use(VueRouter)
    component: () => import('../views/Botones.vue')
   },
   {
-    path: '/bar',
-    name: 'Bar',
-   component: () => import('../views/Bar.vue')
+    path: '/wc',
+    name: 'WordCloud',
+   component: () => import('../views/WordCloud.vue')
   },
   {
     path: '/pie',

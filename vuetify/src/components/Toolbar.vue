@@ -95,10 +95,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-footer
-      color="indigo"  app >
-      <span class="white--text">&copy; 2019</span>
-    </v-footer>
+   
   </v-app>
 </div>
   
@@ -128,16 +125,17 @@
         }
       ],
       items: [
-        {
-          icon: 'mdi-chart-bar',
-          text: 'Bar',
-           rutas:'/bar'
-          
-        },
+        
         {
           icon: 'mdi-chart-pie',
           text: 'Pie',
           rutas:'/pie'
+        },
+         {
+          icon: 'mdi-radar',
+          text: 'Radar',
+          rutas:'/radar'
+
         },
         {
           icon: 'mdi-chart-timeline-variant',
@@ -145,12 +143,18 @@
           rutas:'/time'
 
         },
+       
         {
-          icon: 'mdi-radar',
-          text: 'Radar',
-          rutas:'/radar'
-
+          icon: 'mdi-chart-bar',
+          text: 'WordCloud',
+          rutas:'/wc'
+          
         },
+    ],
+      names : 
+      [ 
+        {texto: 'Types of Chart',icono:'mdi-graph'},
+        {texto:"Social Media" ,icono:'mdi-account-group'}
       ],
           paises: [
       {
