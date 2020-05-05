@@ -36,6 +36,31 @@
 
                 </v-expansion-panel-content>
                 </v-expansion-panel>
+
+ 
+               <v-expansion-panel >
+                <v-expansion-panel-header > 
+                    <v-icon >mdi-alpha-w-circle-outline</v-icon>       Word Cloud
+                </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                    <v-list>
+                        <v-list-item-group v-model="model">
+                            <v-list-item
+                            v-for="(item, i) in paises"
+                            :key="i"
+                            >
+        
+                            <v-list-item-content>
+                                <v-list-item-title v-text="item.text"></v-list-item-title>
+                            </v-list-item-content>
+                            </v-list-item>
+                        </v-list-item-group>
+                        </v-list>
+
+                </v-expansion-panel-content>
+                </v-expansion-panel>
+          
+
                 <v-expansion-panel >
                 <v-expansion-panel-header > 
                     <v-icon >mdi-account-group</v-icon>
@@ -60,7 +85,10 @@
 
                 </v-expansion-panel-content>
                 </v-expansion-panel>
-        </v-expansion-panels>
+
+
+            </v-expansion-panels>
+        
     </v-navigation-drawer>
 
     <v-app-bar app color="indigo" dark>
@@ -124,6 +152,20 @@
 
         },
       ],
+          paises: [
+      {
+        text: "Ecuador",
+        href: "../assets/taws.png"
+      },
+      {
+        text: "Venezuela",
+        href: "../assets/taws.png"
+      },
+      {
+        text: "México",
+        href: "../assets/taws.png"
+      }
+    ],
       names : [ {texto: 'Types of Chart',
                 icono:'mdi-graph'},{texto:"Social Media" ,icono:'mdi-account-group'}],
       model: 1,
