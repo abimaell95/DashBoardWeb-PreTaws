@@ -13,7 +13,7 @@ Vue.use(VueRouter)
    component: () => import('../views/Botones.vue')
   },
   {
-    path: '/wc/:id',
+    path: '/wc',
     name: 'WordCloud',
    component: () => import('../views/WordCloud.vue')
   },

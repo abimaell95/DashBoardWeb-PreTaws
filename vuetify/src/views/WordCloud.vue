@@ -22,43 +22,22 @@
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
                     <v-list>
-                        <v-list-item-group v-model="model">
-                          <v-list-item v-for="(item, i) in items" :key="i">
-                            <v-list-item-icon>
-                                <v-icon v-text="item.icon"></v-icon>
-                            </v-list-item-icon>
-                            <v-list-item-content>
-                                   <v-list-item-title >
-                                      <router-link :to="{ name: 'Fotos', params: {id : item}}" 
-                                        v-for="(item,index) of fotosArreglo" :key="index">
-                                      </router-link>
-                                      <Foto></Foto>
-        <button @click="home">Home</button>
-        <button @click="anterior">Anterior</button>
-        <button @click="siguiente">Siguiente</button>
-                                   </v-list-item-title>
-                            </v-list-item-content>
-                            </v-list-item>
-                        </v-list-item-group>
+                         
                         </v-list>
-
                 </v-expansion-panel-content>
                 </v-expansion-panel>
          </v-expansion-panels>
+
          </v-col>
         </v-row>
+        <Foto/>
       </v-container>
       
   </v-container>
   </div>
 </template>
 <script>
-import Foto from "@/components/Fotos.vue"
-
   export default {
-    components:{
-        Foto
-     },
     data: () => ({
      items: [
         {
@@ -75,18 +54,6 @@ import Foto from "@/components/Fotos.vue"
           rutas:'/time'
         }
     ],
-     fotosArreglo: [1,2,3]
-    }),
-      methods: {
-         home() {
-             this.$router.push('/')
-         },
-         anterior() {
-             this.$router.back()
-         },
-         siguiente() {
-             this.$router.back()
-         }
-     }
-  }
+  })
+}
 </script>
