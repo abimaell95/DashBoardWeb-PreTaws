@@ -18,17 +18,17 @@
         <h2 class="headline font-weight-bold mb-3">Países</h2>
          <v-row justify="center" >
               <v-col sm="4">
-                <v-img :src="require('../assets/Mexico.png')" class="my-3" contain height="100">
+                <v-img :src="require('../assets/Mexico.png')" :alt="Mexico" class="my-3" contain height="100">
                 </v-img>
               </v-col>
 
               <v-col sm="4">
-                <v-img :src="require('../assets/Ecuador.png')" class="my-3" contain height="100">       
+                <v-img :src="require('../assets/Ecuador.png')" :alt="Ecuador" class="my-3" contain height="100">       
                 </v-img>
               </v-col>
 
               <v-col sm="4">
-               <v-img :src="require('../assets/Venezuela.png')" class="my-3" contain height="100">
+               <v-img :src="require('../assets/Venezuela.png')" :alt="Venezuela" class="my-3" contain height="100">
                </v-img>
               </v-col>
                 
