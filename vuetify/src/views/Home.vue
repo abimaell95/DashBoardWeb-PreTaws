@@ -17,22 +17,11 @@
       <v-col class="mb-0" cols="6" sm="6" offset-sm="3">
         <h2 class="headline font-weight-bold mb-3">Países</h2>
          <v-row justify="center" >
-              <v-col sm="4">
-                <v-img :src="require('../assets/Mexico.png')" :alt="Mexico" class="my-3" contain height="100">
+              <v-col v-for="(item,i) in paises" :key="i"  sm="4">
+                <v-img :src="item.src" :alt="Mexico" class="my-3" contain height="100">
                 </v-img>
+                    <p class="display-1 " v-text="item.text"></p>
               </v-col>
-
-              <v-col sm="4">
-                <v-img :src="require('../assets/Ecuador.png')" :alt="Ecuador" class="my-3" contain height="100">       
-                </v-img>
-              </v-col>
-
-              <v-col sm="4">
-               <v-img :src="require('../assets/Venezuela.png')" :alt="Venezuela" class="my-3" contain height="100">
-               </v-img>
-              </v-col>
-                
-          
          </v-row>
       </v-col>
       <br>
@@ -40,14 +29,7 @@
         <h2 class="headline font-weight-bold mb-3">Tópicos</h2>
     <br>
         <v-row justify="center">
-    
-
-          <a
-            v-for="(link, i) in temas"
-            :key="i"
-            class="subheading mx-3"
-            target="_blank"
-          >{{ link}}</a>
+          <a v-for="(link, i) in temas" :key="i" class="subheading mx-3" target="_blank">{{ link}}</a>
         </v-row>
       </v-col>
 
@@ -67,15 +49,15 @@ export default {
     paises: [
       {
         text: "Ecuador",
-        href: "../assets/taws.png"
+        src: require('../assets/Ecuador.png')
       },
       {
         text: "Venezuela",
-        href: "../assets/taws.png"
+        src: require('../assets/Mexico.png')
       },
       {
         text: "México",
-        href: "../assets/taws.png"
+        src: require('../assets/Venezuela.png')
       }
     ]
   })

@@ -35,58 +35,35 @@
                         </v-list>
 
                 </v-expansion-panel-content>
-                </v-expansion-panel>
+            </v-expansion-panel>
 
  
-               <v-expansion-panel >
-                <v-expansion-panel-header > 
-                    <v-icon >mdi-alpha-w-circle-outline</v-icon>       Word Cloud
-                </v-expansion-panel-header>
+             
+
+              <v-expansion-panel >
+                  <v-expansion-panel-header > 
+                      <v-icon >mdi-account-group</v-icon>
+                      Social Media
+                  </v-expansion-panel-header>
                 <v-expansion-panel-content>
                     <v-list>
                         <v-list-item-group v-model="model">
-                            <v-list-item
-                            v-for="(item, i) in paises"
-                            :key="i"
-                            >
-        
-                            <v-list-item-content>
-                                <v-list-item-title v-text="item.text"></v-list-item-title>
-                            </v-list-item-content>
-                            </v-list-item>
-                        </v-list-item-group>
-                        </v-list>
-
-                </v-expansion-panel-content>
-                </v-expansion-panel>
-          
-
-                <v-expansion-panel >
-                <v-expansion-panel-header > 
-                    <v-icon >mdi-account-group</v-icon>
-                    Social Media
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                    <v-list>
-                        <v-list-item-group v-model="model">
-                            <v-list-item
-                            v-for="(item, i) in itemssm"
-                            :key="i"
-                            >
+                            <v-list-item v-for="(item, i) in itemssm" :key="i" >
                             <v-list-item-icon>
                                 <v-icon v-text="item.icon"></v-icon>
                             </v-list-item-icon>
                             <v-list-item-content>
-                                <v-list-item-title v-text="item.text"></v-list-item-title>
+                                <v-list-item-title>
+                                  <router-link class="white--text" :to="item.rutas" > {{item.text}}</router-link>
+                                </v-list-item-title>
                             </v-list-item-content>
                             </v-list-item>
                         </v-list-item-group>
                         </v-list>
 
                 </v-expansion-panel-content>
-                </v-expansion-panel>
-
-
+              
+              </v-expansion-panel>
             </v-expansion-panels>
         
     </v-navigation-drawer>
@@ -112,24 +89,28 @@
         {
           icon: 'mdi-facebook',
           text: 'Facebook',
+          rutas: 'https://www.facebook.com/'
          
         },
         {
           icon: 'mdi-twitter',
           text: 'Twitter',
-          
+          rutas: 'https://www.facebook.com/'
+
         },
         {
           icon: 'mdi-instagram',
           text: 'Instagram',
+          rutas: '/time'
+
         }
       ],
       items: [
         
         {
           icon: 'mdi-chart-pie',
-          text: 'Pie',
-          rutas:'/pie'
+          text: 'BarPlot',
+          rutas:'/barplt'
         },
          {
           icon: 'mdi-radar',

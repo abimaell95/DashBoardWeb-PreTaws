@@ -1,6 +1,5 @@
 <template>
-  <div>
-  <v-container>
+   <v-container>
     
       
       <v-col class="mb-4">
@@ -9,51 +8,64 @@
       <v-container>
         <v-row justify="center">     
           <v-col class="m-2 text-center" cols="12" >
-            <h2 class="headline font-weight-bold mb-3">Word Cloud</h2>
+            <h2 class="font-weight-bold mb-3 display-3">Word Cloud</h2>
           </v-col>
         </v-row>
-
-        <v-row align="center" justify="center">
-          <v-col cols="4">
-         <v-expansion-panels focusable>
-            <v-expansion-panel >
-                <v-expansion-panel-header > 
-                   <v-icon>mdi-map</v-icon> Select the Country
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                    <v-list>
-                         
-                        </v-list>
-                </v-expansion-panel-content>
-                </v-expansion-panel>
-         </v-expansion-panels>
-
-         </v-col>
-        </v-row>
-        <Foto/>
       </v-container>
-      
-  </v-container>
-  </div>
+     <v-container fluid>
+        <v-row row wrap justify-center>
+          <v-col xs6>
+            <v-carousel hide-delimiters height="800px" >
+              <v-carousel-item v-for="(item,i) in itemsim" :key="i"  :src="item.src">
+                        <v-container align-end fill-height fluid pa-0 ma-0 pb-3 >
+                          <v-row fill-height align-end pb-4 mb-4>
+                            <v-col xs12>
+                              <v-card color="grey" class="pa-2   text-center">
+                              <span class="display-2 white--text" v-text="item.name"></span>
+                              </v-card>
+                            </v-col>
+                          </v-row>
+                        </v-container>
+                
+                </v-carousel-item>
+              </v-carousel>
+            </v-col>
+        </v-row>
+      </v-container>
+</v-container>
+
+
+ 
 </template>
 <script>
+import Carrusel from '@/components/Carrusel.vue';
+
   export default {
+     components: {
+        Carrusel
+      },
     data: () => ({
-     items: [
-        {
-          text: 'Ecuador',
-          rutas:'/bar'
-          
-        },
-        {
-          text: 'Mexico',
-          rutas:'/pie'
-        },
-        {
-          text: 'Venezuela',
-          rutas:'/time'
-        }
-    ],
+    itemsim: [
+          { name : 'Ecuador',
+            src: require('../assets/Ecuador.jpg')
+           
+          },
+          {name : 'Mexico',
+            src: require('../assets/Mexico.jpg',)
+          },
+          {name : 'Venezuela',
+           src: require('../assets/Venezuela.jpg',)
+          },
+        ],
+        model: 0,
+        links: [
+        'Home',
+        'About Us',
+        'Team',
+        'Services',
+        'Blog',
+        'Contact Us',
+      ],
   })
 }
 </script>
