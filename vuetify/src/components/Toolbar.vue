@@ -38,15 +38,7 @@
             </v-expansion-panel>
 
  
-              <v-expansion-panel >
-                <v-expansion-panel-header > 
-                    <v-icon >mdi-alpha-w-circle-outline</v-icon> 
-                    <router-link class="white--text" to="/wc" >Word Cloud</router-link>
-                          
-                </v-expansion-panel-header>
-              
-              </v-expansion-panel>
-          
+             
 
               <v-expansion-panel >
                   <v-expansion-panel-header > 
@@ -117,8 +109,8 @@
         
         {
           icon: 'mdi-chart-pie',
-          text: 'Pie',
-          rutas:'/pie'
+          text: 'BarPlot',
+          rutas:'/barplt'
         },
          {
           icon: 'mdi-radar',
