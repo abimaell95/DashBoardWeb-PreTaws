@@ -109,7 +109,7 @@
         
         {
           icon: 'mdi-chart-pie',
-          text: 'BarPlot',
+          text: 'Bar Plot',
           rutas:'/barplt'
         },
          {
@@ -126,7 +126,7 @@
         },
        
         {
-          icon: 'mdi-chart-bar',
+          icon: 'mdi-wordpress',
           text: 'WordCloud',
           rutas:'/wc'
           
