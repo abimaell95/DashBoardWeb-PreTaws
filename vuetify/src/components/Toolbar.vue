@@ -153,7 +153,7 @@
     ],
       names : 
       [ 
-        {texto: 'Types of Chart',icono:'mdi-graph'},
+        {texto: 'Typs of Chart',icono:'mdi-graph'},
         {texto:"Social Media" ,icono:'mdi-account-group'}
       ],
           paises: [
