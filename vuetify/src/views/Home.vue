@@ -22,10 +22,6 @@
                 </v-img>
                     <p class="display-1 " v-text="item.text"></p>
               </v-col>
-
-            
-                
-          
          </v-row>
       </v-col>
       <br>
@@ -33,14 +29,7 @@
         <h2 class="headline font-weight-bold mb-3">Tópicos</h2>
     <br>
         <v-row justify="center">
-    
-
-          <a
-            v-for="(link, i) in temas"
-            :key="i"
-            class="subheading mx-3"
-            target="_blank"
-          >{{ link}}</a>
+          <a v-for="(link, i) in temas" :key="i" class="subheading mx-3" target="_blank">{{ link}}</a>
         </v-row>
       </v-col>
 
