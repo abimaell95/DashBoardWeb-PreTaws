@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Radar from '@/views/Radar'
 Vue.use(VueRouter)
 
   const routes = [{
@@ -18,9 +19,9 @@ Vue.use(VueRouter)
    component: () => import('../views/WordCloud.vue')
   },
   {
-    path: '/pie',
-    name: 'pie',
-   component: () => import('../views/Pie.vue')
+    path: '/barplt',
+    name: 'barplt',
+   component: () => import('../views/Barplt.vue')
   },
   {
     path: '/time',
