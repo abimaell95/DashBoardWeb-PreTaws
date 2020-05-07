@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Radar from '@/views/Radar'
 Vue.use(VueRouter)
 
   const routes = [{

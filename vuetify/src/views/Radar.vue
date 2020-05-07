@@ -1,7 +1,23 @@
 <template>
-  <div>
+  <section class="container">
+    <h1>Demo examples of vue-chartjs</h1>
+    <div class="columns">
+      <div class="column">
+        <h3>Line Chart</h3>
+      </div>
+       <Chart/>
 
-    <h1>Pie Chart</h1>
-
-  </div>
+    </div>
+  </section>
 </template>
+
+<script>
+  import Chart from '@/components/Chart'
+
+  export default {
+    name: 'VueChartJS',
+    components: {
+      Chart
+    }
+  }
+</script>

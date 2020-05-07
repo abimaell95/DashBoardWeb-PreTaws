@@ -151,6 +151,7 @@
         href: "../assets/taws.png"
       }
     ],
+     model:1,
     })
   
   }
