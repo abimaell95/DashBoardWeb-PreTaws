@@ -151,10 +151,7 @@
         href: "../assets/taws.png"
       }
     ],
-      names : [ {texto: 'Types of Chart',
-                icono:'mdi-graph'},{texto:"Social Media" ,icono:'mdi-account-group'}],
-      model: 1,
-    }),
+    })
   
   }
 </script>
