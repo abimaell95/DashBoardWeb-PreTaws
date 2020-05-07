@@ -137,20 +137,6 @@
         {texto: 'Typs of Chart',icono:'mdi-graph'},
         {texto:"Social Media" ,icono:'mdi-account-group'}
       ],
-          paises: [
-      {
-        text: "Ecuador",
-        href: "../assets/taws.png"
-      },
-      {
-        text: "Venezuela",
-        href: "../assets/taws.png"
-      },
-      {
-        text: "México",
-        href: "../assets/taws.png"
-      }
-    ],
      model:1,
     })
   

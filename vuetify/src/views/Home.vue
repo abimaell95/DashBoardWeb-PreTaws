@@ -18,7 +18,7 @@
         <h2 class="headline font-weight-bold mb-3">Países</h2>
          <v-row justify="center" >
               <v-col v-for="(item,i) in paises" :key="i"  sm="4">
-                <v-img :src="item.src" :alt="Mexico" class="my-3" contain height="100">
+                <v-img :src="item.src" :alt="item.text" class="my-3" contain height="100">
                 </v-img>
                     <p class="display-1 " v-text="item.text"></p>
               </v-col>
@@ -52,11 +52,11 @@ export default {
         src: require('../assets/Ecuador.png')
       },
       {
-        text: "Venezuela",
+        text: "Mexico",
         src: require('../assets/Mexico.png')
       },
       {
-        text: "México",
+        text: "Venezuela",
         src: require('../assets/Venezuela.png')
       }
     ]

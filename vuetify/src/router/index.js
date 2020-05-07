@@ -19,9 +19,9 @@ Vue.use(VueRouter)
    component: () => import('../views/WordCloud.vue')
   },
   {
-    path: '/pie',
-    name: 'pie',
-   component: () => import('../views/Pie.vue')
+    path: '/barplt',
+    name: 'barplt',
+   component: () => import('../views/Barplt.vue')
   },
   {
     path: '/time',
