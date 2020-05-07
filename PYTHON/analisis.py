@@ -36,9 +36,9 @@ for elem in df.country.unique():
 matriz = np.array(m)
 transpuesta = matriz.transpose()
 ecuadorTotal= np.sum(transpuesta[:, 0:9],axis=0)
-ecuadorPositivo =((transpuesta[:, 0:9][0])*100/ecuadorTotal)
-ecuadorNeutro = (transpuesta[:, 0:9][1])*100
-ecuadorNegativo =(transpuesta[:, 0:9][2])*100
+ecuadorPositivo =((transpuesta[:, 0:9][0])*100/ecuadorTotal).astype(int)
+ecuadorNeutro = ((transpuesta[:, 0:9][1])*100/ecuadorTotal).astype(int)
+ecuadorNegativo =((transpuesta[:, 0:9][2])*100/ecuadorTotal).astype(int)
 
 print(ecuadorPositivo)
 
@@ -61,7 +61,7 @@ negativo = plt.bar(ind, ecuadorNegativo, width,bottom= ecuadorNeutro+ecuadorPosi
 plt.ylabel('Scores')
 plt.title('Scores by feelings')
 plt.xticks(ind, tuple([tipo for tipo in titulos]))
-plt.yticks(np.arange(0, 1000, step=100))
+plt.yticks(np.arange(0, 100, step=10))
 plt.legend((positivo[0], neutro[0],negativo[0]), ('Positivo', 'Neutro','Negativo'))
 
 plt.show()
