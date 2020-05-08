@@ -1,4 +1,8 @@
 <script>
+  new Vue({
+    el:'#app',
+    lenguajes:[]
+  })
   //Importing Line class from the vue-chartjs wrapper
   import { Bar } from 'vue-chartjs'
   //Exporting this so it can be used in other components
