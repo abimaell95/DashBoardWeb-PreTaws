@@ -50,14 +50,16 @@ for i in range(N):
 
     for j in range(F):
         fPaisP= (matrizPais[j]*100)/totalPais
-        datos['%s%s'%(paises[i],feelings[j])]=list(np.around(fPaisP,decimals= 3).astype(str))
+        datos['%s%s'%(paises[i],feelings[j])]=list(np.around(fPaisP,decimals= 3))
     
-
-# print(datosJson)
+datosJson= json.dumps(datos)
+# datosJson2=json.dump(datos)
+print(type(datosJson))
 # print(type(datosJson))
 # print(type(datos))
+with open('datos.json','w') as f:
+    json.dump(datos,f)
 
-print(datos)
         
 
 
