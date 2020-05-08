@@ -3,6 +3,10 @@
     el:'#app',
     lenguajes:[]
   })
+  fetch('https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/datos.json')
+  .then(results=>results.json())
+
+
   //Importing Line class from the vue-chartjs wrapper
   import { Bar } from 'vue-chartjs'
   //Exporting this so it can be used in other components
@@ -12,7 +16,7 @@
       return {
         datacollection: {
           //Data to be represented on x-axis
-          labels: [ 'Type1', 'Type2', 'Type3', 'Type4', 'Type5', 'Type6', 'Type7', 'Type8', 'Type9'],
+          labels: results.topicos,
           datasets: [
             {
               label: 'Positivo',
