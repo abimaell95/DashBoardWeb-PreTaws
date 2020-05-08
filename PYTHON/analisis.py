@@ -47,14 +47,15 @@ F=3 #NUMERO DE SENTIMIENTO
 for i in range(N):
     matrizPais= transpuesta[:,9*(i):9*(i+1)]
     totalPais= np.sum(matrizPais,axis=0)
-    datos['total%s'%(paises[i])]=totalPais
+
     for j in range(F):
         fPaisP= (matrizPais[j]*100)/totalPais
-        datos['%s%s'%(paises[i],feelings[j])]=list(np.around(fPaisP,decimals= 3))
+        datos['%s%s'%(paises[i],feelings[j])]=list(np.around(fPaisP,decimals= 3).astype(str))
     
-# datosJson= json.dumps(datos)
+
+# print(datosJson)
 # print(type(datosJson))
-print(type(datos))
+# print(type(datos))
 
 print(datos)
         
