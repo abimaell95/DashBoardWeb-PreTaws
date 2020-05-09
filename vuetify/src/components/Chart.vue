@@ -1,26 +1,24 @@
 <script>
-  new Vue({
-    el:'#app',
-    lenguajes:[]
-  })
-  fetch('https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/datos.json')
-  .then(results=>results.json())
-
 
   //Importing Line class from the vue-chartjs wrapper
   import { Bar } from 'vue-chartjs'
   //Exporting this so it can be used in other components
   export default {
     extends: Bar,
+
     data () {
       return {
         datacollection: {
           //Data to be represented on x-axis
-          labels: results.topicos,
+        
+          labels: [ "Crimen","Política","Corrupcion",
+    "Salud","Religion", 'Desempleo', 'Educación','Deportes',
+    'Economia'
+    ],
           datasets: [
             {
               label: 'Positivo',
-              backgroundColor: '#5EC4ED',
+              backgroundColor: '#249EBF',
               pointBackgroundColor: 'white',
               borderWidth: 2,
               pointBorderColor: '#249EBF',
@@ -37,7 +35,7 @@
               },
             {
               label: 'Negativo',
-              backgroundColor: '#D64020',
+              backgroundColor: '#ff8000',
               pointBackgroundColor: 'white',
               borderWidth: 2,
               pointBorderColor: '#249EBF',
@@ -45,6 +43,7 @@
             }
           ]
         },
+
         //Chart.js options that controls the appearance of the chart
         options: {
           scales: {
