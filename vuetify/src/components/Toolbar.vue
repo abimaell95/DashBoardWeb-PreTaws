@@ -54,7 +54,15 @@
                             </v-list-item-icon>
                             <v-list-item-content>
                                 <v-list-item-title>
-                                  <router-link class="white--text" :to="item.rutas" > {{item.text}}</router-link>
+                                        <li>
+        <a class="text-white"
+          :href= 'item.rutas'
+          target="_blank"
+          rel="noopener"
+          >{{item.text}}</a
+        >
+      </li>
+
                                 </v-list-item-title>
                             </v-list-item-content>
                             </v-list-item>
@@ -81,6 +89,7 @@
 
 
 <script>
+
   export default {
 
    data: () => ({
@@ -89,19 +98,19 @@
         {
           icon: 'mdi-facebook',
           text: 'Facebook',
-          rutas: 'https://www.facebook.com/'
+          rutas: 'https://www.facebook.com/tawsespol/'
          
         },
         {
           icon: 'mdi-twitter',
           text: 'Twitter',
-          rutas: 'https://www.facebook.com/'
+          rutas: 'https://www.instagram.com/taws_espol/'
 
         },
         {
           icon: 'mdi-instagram',
           text: 'Instagram',
-          rutas: '/time'
+          rutas: 'https://twitter.com/TawsEspol'
 
         }
       ],
@@ -138,7 +147,24 @@
         {texto:"Social Media" ,icono:'mdi-account-group'}
       ],
      model:1,
+     
+
     })
   
   }
+  
 </script>
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+</style>
