@@ -1,7 +1,27 @@
 <template>
-  <div>
+  <section class="container">
+     <v-col class="mb-4">
+        <h1 class="display-2 font-weight-bold mb-3"></h1>
+      </v-col>
+      <br>
+    <div class="columns">
+      <div class="column">
+        <h3 class="text-center">Line Chart</h3>
+      </div>
+      <br><br>
+       <Chart/>
 
-    <h1>Pie Chart</h1>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nulla ullam voluptates dolorum iure sint natus commodi in, doloribus nam illo officiis, consequatur blanditiis fuga odit voluptatum enim quia est.</p>
-  </div>
+    </div>
+  </section>
 </template>
+
+<script>
+  import Chart from '@/components/Time'
+
+  export default {
+    name: 'VueChartJS',
+    components: {
+      Time
+    }
+  }
+</script>
