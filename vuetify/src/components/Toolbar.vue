@@ -104,13 +104,13 @@
         {
           icon: 'mdi-twitter',
           text: 'Twitter',
-          rutas: 'https://www.instagram.com/taws_espol/'
+          rutas: 'https://twitter.com/TawsEspol'
 
         },
         {
           icon: 'mdi-instagram',
           text: 'Instagram',
-          rutas: 'https://twitter.com/TawsEspol'
+          rutas: 'https://www.instagram.com/taws_espol/'
 
         }
       ],
