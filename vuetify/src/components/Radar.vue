@@ -68,7 +68,9 @@ import { Radar } from 'vue-chartjs'
             suggestedMin: 50,
             suggestedMax: 90
         }
-    }
+    },
+    responsive: true,
+          maintainAspectRatio: false
      }
       }
     },

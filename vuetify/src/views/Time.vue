@@ -6,22 +6,29 @@
       <br>
     <div class="columns">
       <div class="column">
+
         <h3 class="text-center">Line Chart</h3>
       </div>
       <br><br>
        <Chart/>
 
-    </div>
+        <h3 class="text-center">Time series Chart</h3>
+      </div>
+      <br><br>
+       <Timese/>
+
+
   </section>
 </template>
 
 <script>
-  import Chart from '@/components/Time'
+  import Timese from '@/components/Timese'
 
   export default {
     name: 'VueChartJS',
     components: {
-      Time
+      Timese
     }
   }
 </script>
+
