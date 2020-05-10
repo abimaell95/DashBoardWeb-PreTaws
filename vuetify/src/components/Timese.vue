@@ -23,7 +23,7 @@
               borderColor: "rgba(200,0,0,0.6)",
               pointBorderColor: '#249EBF',
               //Data to be represented on y-axis
-              data: [40, 20, 30, 50, 90, 10, 20, 40,80],
+              data: [40, 20, 60, 50, 90, 10, 20, 40,80],
             },
             {
               label: 'Mexico',
