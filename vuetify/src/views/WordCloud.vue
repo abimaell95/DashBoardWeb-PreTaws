@@ -13,7 +13,13 @@
         </v-row>
       </v-container>
      <v-container fluid>
-        <v-row row wrap justify-center>
+        <v-row align="center" justify="center">
+          <v-col class="d-flex text-center" cols="12" sm="6">
+            <v-select :items="items" label="Select the country" ></v-select>
+          </v-col>
+        </v-row>
+
+        <v-row row wrap justify="center">
           <v-col xs6>
             <v-carousel hide-delimiters height="800px" >
               <v-carousel-item v-for="(item,i) in itemsim" :key="i"  :src="item.src">
@@ -66,6 +72,7 @@ import Carrusel from '@/components/Carrusel.vue';
         'Blog',
         'Contact Us',
       ],
+       items: ['Ecuador', 'Mexico', 'Venezuela'],
   })
 }
 </script>

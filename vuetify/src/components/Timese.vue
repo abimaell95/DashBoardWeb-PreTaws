@@ -11,10 +11,7 @@
         datacollection: {
           //Data to be represented on x-axis
         
-          labels: [ "Crimen","Política","Corrupcion",
-    "Salud","Religion", 'Desempleo', 'Educación','Deportes',
-    'Economia'
-    ],
+          labels: ['0','2015','2016','2017','2018'],
           datasets: [
             {
               label: 'Ecuador',
