@@ -30,7 +30,7 @@
     components: {
       Radar
     }, data: () => ({
-      items: ['Ecuador', 'Mexico', 'Venezuela'],
+      items: [2015,2016,2017,2018],
     }),
   }
 </script>

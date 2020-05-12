@@ -1,6 +1,6 @@
 <template>
       <div>
-        <v-carousel cycle height="15ñ0" hide-delimiter-background show-arrows-on-hover>
+        <v-carousel cycle height="15ñ0" hide-delimiters hide-delimiter-background show-arrows-on-hover dark>
         <v-carousel-item v-for="(slide, i) in slides" :key="i">
           <v-sheet :color="colors[i]" height="100%">
             <v-row class="fill-height ml-5" justify="center">
@@ -8,7 +8,7 @@
                 <p class="display-2 text-right">
                 {{ slide }} 
                 </p>
-              <p class="display-2 text-right"> {{ amount[i] }} </p>
+              <p class="display-2 text-right"  >{{ amount[i]}}</p>
               </div>
             </v-row>
           </v-sheet>
@@ -24,9 +24,9 @@
     data () {
       return {
         colors: [
-          'indigo',
-          'pink darken-2',
-          'deep-purple accent-4',
+          'blue lighten-3',
+          'teal lighten-3 ',
+          'deep-purple lighten-3',
         ],
         slides: [
           'Ecuador',
@@ -35,9 +35,9 @@
 
         ],
         amount:[
-          '100',
-          '200',
-          '300',
+          'Crime',
+          'Health',
+          'Sport',
         ]
       }
     },
