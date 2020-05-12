@@ -1,5 +1,16 @@
 <script>
-
+fetch('https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/datos.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+  async function cargarJSON(){
+    const response= await fetch('https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/datos.json');
+    const myJson= await response.json;
+ 
+  }
   //Importing Line class from the vue-chartjs wrapper
   import { Bar } from 'vue-chartjs'
   //Exporting this so it can be used in other components
