@@ -15,46 +15,42 @@
      <v-container fluid>
         <v-row align="center" justify="center">
           <v-col class="d-flex text-center" cols="12" sm="6">
-            <v-select :items="items" label="Select the country" ></v-select>
-          </v-col>
-        </v-row>
-        
-      </v-container>
+            <v-select v-model='select' :items="items" label="Select the country" ></v-select>         
+          </v-col>   
+    
+        </v-row>   
+        </v-container>
+      
+    <v-img :src=select alt="km" class="my-3" contain height="300" />
 </v-container>
 
 
  
 </template>
 <script>
-import Carrusel from '@/components/Carrusel.vue';
-
+import Ecuador from  "../assets/Ecuador.jpg"
   export default {
-     components: {
-        Carrusel
-      },
-    data: () => ({
-    itemsim: [
-          { name : 'Ecuador',
-            src: require('../assets/Ecuador.jpg')
-           
+    name: 'WordCloud',
+
+    data(){
+      return{
+        select:Ecuador,
+   
+        items: [
+          { text : 'Ecuador',
+            value:Ecuador      
           },
-          {name : 'Mexico',
-            src: require('../assets/Mexico.jpg',)
+          {text : 'Mexico',
+            value:require('../assets/Mexico.jpg',)
           },
-          {name : 'Venezuela',
-           src: require('../assets/Venezuela.jpg',)
-          },
-        ],
-        model: 0,
-        links: [
-        'Home',
-        'About Us',
-        'Team',
-        'Services',
-        'Blog',
-        'Contact Us',
-      ],
-       items: ['Ecuador', 'Mexico', 'Venezuela'],
-  })
+          {text : 'Venezuela',
+           value: require('../assets/Venezuela.jpg',)
+          }
+          ]}  
+          
+  },
+    updated(){
+    console.log(this.select)
+  }
 }
 </script>
