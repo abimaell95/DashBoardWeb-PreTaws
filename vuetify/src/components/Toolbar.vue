@@ -117,8 +117,8 @@
       items: [
         
         {
-          icon: 'mdi-chart-pie',
-          text: 'Bar Plot',
+          icon: 'mdi-chart-bar-stacked',
+          text: 'Bar',
           rutas:'/barplt'
         },
          {

@@ -8,6 +8,7 @@
       <div class="column">
         <h3 class="text-center">Bar Plot</h3>
       <v-row align="center" justify="center">
+        <v-row align="center" justify="center">
       <v-col class="d-flex text-center" cols="12" sm="6">
         <v-select id='user' :items="items" label="Select the country" @change="printselect" ></v-select>
       </v-col>
