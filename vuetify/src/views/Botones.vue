@@ -12,8 +12,18 @@
             </v-col>
         </v-row>
 
-
+    <Menul/>
     </v-container>
         
     
 </template>
+<script>
+  import Menul from '@/components/Menul'
+
+  export default {
+    name: 'VueChartJS',
+    components: {
+      Menul
+    }
+  }
+</script>

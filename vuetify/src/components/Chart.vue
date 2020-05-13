@@ -1,5 +1,5 @@
 <script>
-
+  /*
   //Importing Line class from the vue-chartjs wrapper
   import { Bar } from 'vue-chartjs'
   //Exporting this so it can be used in other components
@@ -11,7 +11,7 @@
         datacollection: {
           //Data to be represented on x-axis
         
-          labels: [ "Crimen","Política","Corrupcion",
+          labels: [ this.valor,"Política","Corrupcion",
     "Salud","Religion", 'Desempleo', 'Educación','Deportes',
     'Economia'
     ],
@@ -63,12 +63,18 @@
           maintainAspectRatio: false
         }
       }
-    },
-    mounted () {
+    },*/
+  /*  mounted () {
       //renderChart function renders the chart with the datacollection and options object.
       this.renderChart(this.datacollection, this.options)
-    }
-  }
+      console.log(this.valor)
+     /*document.getElementById('user').addEventListener('change',(event)=> console.log(event))*/
+    
+   /* props: ['valor'],
+    updated() {
+      console.log(this.valor)
+    },*/
+
 </script>
 
           
