@@ -18,25 +18,7 @@
             <v-select :items="items" label="Select the country" ></v-select>
           </v-col>
         </v-row>
-
-        <v-row row wrap justify="center">
-          <v-col xs6>
-            <v-carousel hide-delimiters height="800px" >
-              <v-carousel-item v-for="(item,i) in itemsim" :key="i"  :src="item.src">
-                        <v-container align-end fill-height fluid pa-0 ma-0 pb-3 >
-                          <v-row fill-height align-end pb-4 mb-4>
-                            <v-col xs12>
-                              <v-card color="grey" class="pa-2   text-center">
-                              <span class="display-2 white--text" v-text="item.name"></span>
-                              </v-card>
-                            </v-col>
-                          </v-row>
-                        </v-container>
-                
-                </v-carousel-item>
-              </v-carousel>
-            </v-col>
-        </v-row>
+        
       </v-container>
 </v-container>
 

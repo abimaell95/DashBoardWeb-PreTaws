@@ -52,30 +52,7 @@ for i in range(N):
         fPaisP= (matrizPais[j]*100)/totalPais
         datos['%s%s'%(paises[i],feelings[j])]=list(np.around(fPaisP,decimals= 3))
     
-datosJson= json.dumps(datos)
-# datosJson2=json.dump(datos)
-print(type(datosJson))
-# print(type(datosJson))
-# print(type(datos))
+
+print('hola')
 with open('datos.json','w') as f:
     json.dump(datos,f)
-
-        
-
-
-# N = 9
-
-# ind = np.arange(N)    # the x locations for the groups
-# width = 0.30       # the width of the bars: can also be len(x) sequence
-
-# positivo = plt.bar(ind, ecuadorPositivo, width)
-# neutro = plt.bar(ind, ecuadorNeutro, width, bottom=ecuadorPositivo)
-# negativo = plt.bar(ind, ecuadorNegativo, width,bottom= ecuadorNeutro+ecuadorPositivo)
-
-# plt.ylabel('Scores')
-# plt.title('Scores by feelings')
-# plt.xticks(ind, tuple([tipo for tipo in titulos]))
-# plt.yticks(np.arange(0, 100, step=10))
-# plt.legend((positivo[0], neutro[0],negativo[0]), ('Positivo', 'Neutro','Negativo'))
-
-# plt.show()
