@@ -10,7 +10,7 @@
       <v-row align="center" justify="center">
         <v-row align="center" justify="center">
       <v-col class="d-flex text-center" cols="12" sm="6">
-        <v-select id='user' :items="items" label="Select the country" @change="printselect" ></v-select>
+        <v-select v-model='select' id='user' :items="items" label="Select the country" @change="printselect" ></v-select>
       </v-col>
       </v-row>
       </div>
@@ -29,7 +29,7 @@
       Chart
     }, data: () => ({
       items: ['Ecuador', 'Mexico', 'Venezuela'],
-      value: 'kjwajasasj',
+      value: 'kjwajasasj',select
     }),
 
      methods: {
