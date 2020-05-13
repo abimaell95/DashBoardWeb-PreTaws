@@ -1,9 +1,10 @@
 <template>
     <div>
         <p>
-           politica : <span id="polit"></span>
+           Ecuador: <span id="ec"></span> <br> <br>
+           Mexico : <span id="mex"></span> <br> <br>
+           Venezuela : <span id="ve"></span>
     
-            latitude : <span id="crime"></span>
 
         </p>
 
@@ -11,32 +12,30 @@
 </template>
 
 <script>
-    /*import  axios from 'axios'
-    export default {
-        data() {
-            return {
-                todos:null
-            }
-        }
-    }*/
-    const xlabels=[];
-    const xvalues=[];
-
-    async function chart () {
-    const url='https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Radar/""+.json'
+    
+    const xlabels=[]
+    const xvaluesEc=[];xvaluesMe=[];xvaluesVe=[];
+    const url='https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Radar/2015.json'
         getdata()
         async function getdata(){
             const response =await fetch (url)
             const datos= await response.json()
+            console.log(datos)
             for (let key in datos){
                 xlabels.push(key)
-                xvalues.push(datos[key])
-            }
+                if (key==="Ecuador"){
+                    xvaluesEc.push(datos[key])
+                }
+                if (key==="Mexico"){
+                    xvaluesMe.push(datos[key])
+                }
+                if (key==="Venezuela"){
+                    xvaluesVe.push(datos[key])
+                }
             /*const { polit, crime }=datos*/
-            console.log(xvalues)
-            document.getElementById("polit").textContent= xvalues;
-            /*document.getElementById("crime").textContent= "world";*/
-            
+            document.getElementById("ec").textContent= xvaluesEc;
+            document.getElementById("mex").textContent= xvaluesMe;
+            document.getElementById("ve").textContent= xvaluesVe;
+            }            
         }
-    }
 </script>
