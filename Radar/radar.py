@@ -26,7 +26,6 @@ for year in list(years):
             topicos.append(int(condicion.sum()))
         porcentajes= np.array(topicos)/sum(topicos)*100
         topicos=list(np.around(porcentajes,decimals= 3))
-        print(topicos)
         myJSON[pais]=topicos
     with open('Radar/'+str(year)+'.json', 'w') as f:
         try:
