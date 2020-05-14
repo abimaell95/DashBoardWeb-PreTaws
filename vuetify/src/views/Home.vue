@@ -67,8 +67,9 @@ export default {
   name: "Home",
 
   data: () => ({
-    temas: [ "Crimen","Política","Corrupcion",
-    "Salud","Religion", 'Desempleo', 'Educación'
+    temas: [ "Crimen","Política","Corrupción",
+    "Salud","Religion", 'Desempleo', 'Educación', "Economía",
+    "Deportes"
     ],
     paises: [
       {

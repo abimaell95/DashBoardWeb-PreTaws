@@ -1,14 +1,13 @@
 <template >
 <div >
   
-  <v-app id="inspire">
+  <v-app >
      <router-view></router-view>  
     <v-navigation-drawer dark v-model="drawer" app>
-        <v-row class="mb-3 mt-3 ml-3" >
-           <v-avatar size=150>
-                 <img
-                src="../assets/taws.png"  alt="Taws" height="150" >
-            </v-avatar>
+        <v-row class="ml-3" justify="center" >
+            <img
+                src="../assets/taws.png"  alt="Taws" width="150" height="150">
+        
         </v-row>
 
         <v-expansion-panels focusable>

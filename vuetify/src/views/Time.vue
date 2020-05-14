@@ -33,15 +33,15 @@ export default {
       datacollection: {},
       select: [],
       options: [
-        { alue: 20, text: "Ecuador" },
-         {value:10,  text: "Crime"},
+        { value: 20, text: "Economía" },
+         {value:10,  text: "Crimen"},
           {value:25 ,text:"Política"},
-         {value:25 , text:"Corrupcion"},
-         {value:25 , text:"Salud"},
-          {value:25 ,text:"Religion"},
-          {value:25 ,text:"Desempleo"},
-         { value:25 ,text:"Educación"},
-         { value:25 ,text:"Deportes"},
+         {value:30 , text:"Corrupción"},
+         {value:35 , text:"Salud"},
+          {value:40 ,text:"Religion"},
+          {value:80 ,text:"Desempleo"},
+         { value:50 ,text:"Educación"},
+         { value:70,text:"Deportes"},
    
       ]
     };
@@ -59,10 +59,7 @@ export default {
         datasets: [
             {
               label: 'Ecuador',
-              borderWidth: 2,
-              backgroundColor: "transparent",
-              borderColor: "rgba(200,0,0,0.6)",
-              pointBorderColor: '#249EBF',
+       
               //Data to be represented on y-axis
               data: [40, 20, 60, 50, 90, 10, 20, 40,80],
           },
@@ -107,45 +104,3 @@ export default {
 }
  
 </style>
-
-
-
-
-<!--<template>
-  <section class="container">
-     <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3"></h1>
-      </v-col>
-      <br>
-    <div class="columns">
-        <h3 class="text-center">Time series Chart</h3>
-
-        <v-row align="center" justify="center">
-          <v-col class="d-flex text-center" cols="12" sm="6">
-            <v-select v-model='select' :items="items" label="Select the topic" ></v-select>
-          </v-col>
-        </v-row>
-
-      </div>
-      <br><br>
-       <Timese/>
-
-
-  </section>
-</template>
-
-<script>
-  import Timese from '@/components/Timese'
-
-  export default {
-    name: 'VueChartJS',
-    components: {
-      Timese
-    }, data: () => ({
-      items:[ "Crimen","Política","Corrupcion",
-    "Salud","Religion", 'Desempleo', 'Educación', 'Deportes',
-    'Economia'], select
-    }),
-  }
-</script>-->
-
