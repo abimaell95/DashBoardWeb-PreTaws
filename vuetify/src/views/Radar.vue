@@ -58,23 +58,18 @@ export default {
         ],
         datasets: [
           {
-            label: 'Ecuador',
-                backgroundColor: "transparent",
-                borderColor: "rgba(200,0,0,0.6)",
-                fill: false,
-                radius: 6,
-                pointRadius: 6,
-                pointBorderWidth: 3,
-                pointBackgroundColor: "orange",
-                pointBorderColor: "rgba(200,0,0,0.6)",
-                pointHoverRadius: 10,
+            label: 'Positivo',
+            backgroundColor: "#a6b1e1",
+            pointBackgroundColor: "white",
+            borderWidth: 2,
+            pointBorderColor: "#249EBF",
                         //Data to be represented on y-axis
-              data: [40, 20, 30, 50, 90, 10, 20, 40,80],
+              data: [valor,valor,valor,valor,valor,valor,valor,valor,valor],
             
           },
           {
             label: "Neutro",
-            backgroundColor: "#746A68",
+            backgroundColor: "##dcd6f7",
             pointBackgroundColor: "white",
             borderWidth: 2,
             pointBorderColor: "#249EBF",
@@ -92,7 +87,7 @@ export default {
           },
           {
             label: "Negativo",
-            backgroundColor: "#ff8000",
+            backgroundColor: "#323232",
             pointBackgroundColor: "white",
             borderWidth: 2,
             pointBorderColor: "#249EBF",

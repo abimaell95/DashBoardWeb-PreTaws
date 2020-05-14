@@ -9,7 +9,7 @@
           v-model="select"
           v-on:change="fillData(`${select}`)"
           :items="options"
-          label="Select the country"
+          label="Select the topic"
         ></v-select>
 
       </v-col>
@@ -33,9 +33,16 @@ export default {
       datacollection: {},
       select: [],
       options: [
-        { value: 20, text: "Ecuador" },
-        { value: 60, text: "Venezuela" },
-        { value: 50, text: "México" }
+        { alue: 20, text: "Ecuador" },
+         {value:10,  text: "Crime"},
+          {value:25 ,text:"Política"},
+         {value:25 , text:"Corrupcion"},
+         {value:25 , text:"Salud"},
+          {value:25 ,text:"Religion"},
+          {value:25 ,text:"Desempleo"},
+         { value:25 ,text:"Educación"},
+         { value:25 ,text:"Deportes"},
+   
       ]
     };
   },
@@ -95,7 +102,7 @@ export default {
 
 <style>
 .small {
-  max-width: 500px;
+  max-width: 900px;
   margin: 150px auto;
 }
  
