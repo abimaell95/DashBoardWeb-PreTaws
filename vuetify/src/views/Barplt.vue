@@ -18,13 +18,9 @@
     <Chart :chart-data="datacollection"></Chart>
     <button @click="fillData()">Randomize</button>
   </div>
-<<<<<<< HEAD
-</v-container>
-=======
    
 
   </v-container>
->>>>>>> da2ebfd76f93a28f0f87917d03eec0f020a4199a
 </template>
 
 <script>
