@@ -2,16 +2,18 @@
   <v-container >
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img :src="require('../assets/taws.png')" class="my-3" contain height="200" />
+        <br>
+        <br>
+        <br>
       </v-col>
 
       <v-col class="mb-4" cols="12" sm="6" offset-sm="3">
         <h1 class="display-2 font-weight-bold mb-3"></h1>
 
-        <p class="subheading font-weight-regular">
-          Bienvenido al dashboar de noticias relevantes en algunos
-          <br />países de America Latina
-        </p>
+        <h2 class="subheading font-weight-regular">
+          Bienvenido al dashboard  de noticias relevantes en algunos
+          países de America Latina
+        </h2>
       </v-col>
 
       <v-col class="mb-0" cols="6" sm="6" offset-sm="3">
@@ -29,7 +31,7 @@
         <h2 class="headline font-weight-bold mb-3">Tópicos</h2>
     <br>
         <v-row justify="center">
-          <a v-for="(link, i) in temas" :key="i" class="subheading mx-3" target="_blank">{{ link}}</a>
+          <a v-for="(link, i) in temas" :key="i" class="grey--text mx-3">{{ link}}</a>
         </v-row>
       </v-col>
 
