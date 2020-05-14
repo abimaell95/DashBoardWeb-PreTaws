@@ -18,11 +18,7 @@ Vue.use(VueRouter)
     name: 'WordCloud',
    component: () => import('../views/WordCloud.vue')
   },
-  {
-    path: '/barplot',
-    name: 'barplot',
-   component: () => import('../views/Barplot.vue')
-  }, {
+{
     path: '/barplt',
     name: 'barplt',
    component: () => import('../views/Barplt.vue')
