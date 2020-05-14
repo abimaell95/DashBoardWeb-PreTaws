@@ -125,6 +125,7 @@ export default {
   max-width: 500px;
   margin: 150px auto;
 }
+ 
 </style>
 
 
