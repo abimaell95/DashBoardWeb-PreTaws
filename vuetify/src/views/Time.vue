@@ -7,14 +7,15 @@
       <v-col class="d-flex text-center" cols="12" sm="6">
         <v-select
           v-model="select"
-          v-on:change="fillData(`${select}`)"
+          v-on:change="fillData(Ecuador,Mexico,Venezuela)"
           :items="options"
           label="Select the topic"
         ></v-select>
-<p>{{select}}</p>
+        <p>{{select}}</p>
       </v-col>
     </v-row>
-
+<p>{{loaded}}</p>
+<p>{{Ecuador}}</p>
     <div class="small">
       <Timese :chart-data="datacollection"></Timese>
     </div>
@@ -31,10 +32,10 @@ export default {
   data: () => {
     return {
       datacollection: {},
-      loaded: false,
-      pageViews: null,
-      pageViewsByCategory: null,
-      visitors: null,
+      Ecuador:[65, 76, 73, 80],
+      Venezuela:[],
+      Mexico:[],
+      loaded:false,
       select: " ",
       options: [ "Crimen","Política","Corrupción",
     "Salud","Religion", 'Desempleo', 'Educación', "economi",
@@ -44,17 +45,17 @@ export default {
   },
   async created(select) {
     let resp = await fetch(
-      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/"+select+".json"
-    );
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/economi.json"
+      )
     let data = await resp.json();
-    this.pageViews = data.pageViews;
-    this.pageViewsByCategory = data.pageViewsByCategory;
-    this.visitors = data.newVsReturning;
+    this.Ecuador = data.Ecuador;
+    this.Mexico = data.Mexico;
+    this.Venezuelas = data.newVsReturning;
     this.loaded = true;
   },
 
   methods: {
-    fillData(valor) {
+    fillData(Ecuador,Mexico,Venezuela) {
       this.datacollection = {
         labels: [
           "2015",
@@ -67,7 +68,7 @@ export default {
               label: 'Ecuador',
        
               //Data to be represented on y-axis
-              data: [40, 20, 60, 50, 90, 10, 20, 40,80],
+              data: Ecuador,
           },
            {
               label: 'Mexico',
@@ -75,7 +76,7 @@ export default {
               backgroundColor: "transparent",
               borderColor: "rgba(00,200,0,0.6)",
               pointBorderColor: '#249EBF',
-              data: [40, 39, 10, 40, 39, 80, 40,70,70]
+              data: Mexico
               },
           {
             label: 'Venezuela',
@@ -84,15 +85,7 @@ export default {
               borderColor: "rgba(0,0,200,0.6)",
               pointBorderColor: '#250EBF',
               
-              data: [valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor]
+              data: Venezuela
           }
         ]
       };
@@ -108,5 +101,4 @@ export default {
   max-width: 900px;
   margin: 150px auto;
 }
- 
 </style>
