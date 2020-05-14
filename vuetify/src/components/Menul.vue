@@ -14,7 +14,9 @@
 <script>
     
     const xlabels=[]
-    const xvaluesEc=[];xvaluesMe=[];xvaluesVe=[];
+    const xvaluesEc=[];
+    const xvaluesMe=[];
+    const xvaluesVe=[];
     const url='https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Radar/2015.json'
         getdata()
         async function getdata(){

@@ -5,7 +5,6 @@
            
               <Toolbar />              
                    
-              <Carrusel />
       
     </div>
   </v-app>
