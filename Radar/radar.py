@@ -13,7 +13,7 @@ tipos = types.unique()  # types de noticias sin repetir
 paises = country.unique()  # paises sin repetir
 fecha = dates.unique()
 
-
+print(tipos)
 yearsAll=np.array(([i.split('-')[0]  for i in dates]))
 years= np.unique(yearsAll)
 
