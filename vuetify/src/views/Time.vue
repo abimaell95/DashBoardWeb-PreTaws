@@ -8,6 +8,7 @@
         <v-select
           v-model="select"
           v-on:change="fillData(Ecuador,Mexico,Venezuela)"
+      
           :items="options"
           label="Select the topic"
         ></v-select>
@@ -16,6 +17,7 @@
     </v-row>
 <p>{{loaded}}</p>
 <p>{{Ecuador}}</p>
+<p>{{Venezuela}}</p>
     <div class="small">
       <Timese :chart-data="datacollection"></Timese>
     </div>
@@ -32,26 +34,38 @@ export default {
   data: () => {
     return {
       datacollection: {},
-      Ecuador:[65, 76, 73, 80],
+      Ecuador:[],
       Venezuela:[],
       Mexico:[],
       loaded:false,
-      select: " ",
+      select: "economi",
       options: [ "Crimen","Política","Corrupción",
     "Salud","Religion", 'Desempleo', 'Educación', "economi",
     "Deportes"
     ]
     }
   },
-  async created(select) {
+  async mounted() {
     let resp = await fetch(
-      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/economi.json"
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/"+this.select+".json"
       )
     let data = await resp.json();
     this.Ecuador = data.Ecuador;
     this.Mexico = data.Mexico;
-    this.Venezuelas = data.newVsReturning;
+    this.Venezuela = data.Venezuela;
     this.loaded = true;
+    
+  },
+   async updated()  {
+    let resp = await fetch(
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/"+this.select+".json"
+      )
+    let data = await resp.json();
+    this.Ecuador = data.Ecuador;
+    this.Mexico = data.Mexico;
+    this.Venezuela = data.Venezuela;
+    this.loaded = true;
+    
   },
 
   methods: {
@@ -66,8 +80,8 @@ export default {
         datasets: [
             {
               label: 'Ecuador',
-       
-              //Data to be represented on y-axis
+              backgroundColor: "transparent",
+              borderColor: "#ffd31d",
               data: Ecuador,
           },
            {
