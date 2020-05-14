@@ -10,7 +10,7 @@
           v-model="select"
           v-on:change="fillData(`${select}`)"
           :items="options"
-          label="select the country"
+          label="Select the country"
         ></v-select>
 
       </v-col>

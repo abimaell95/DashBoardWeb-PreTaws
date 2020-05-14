@@ -1,5 +1,6 @@
 <template>
-  <v-container >
+<v-container>
+  <v-section>
     <v-row class="text-center">
       <v-col cols="12">
         <br>
@@ -37,7 +38,28 @@
 
       
     </v-row>
-  </v-container>
+    
+  </v-section>
+   <v-card max-width="1000" class="mx-auto" >
+    <v-container class="pa-1">
+      <v-item-group v-model="selected" multiple >
+        <v-row>
+          <v-col v-for="(item, i) in items" :key="i" cols="12" md="4" >
+            <v-item v-slot:default="{ active, toggle }">
+              <v-img :src="`https://cdn.vuetifyjs.com/images/${item.src}`" height="150"  class="text-right pa-2" @click="toggle" >
+                <v-btn icon dark >
+                  <v-icon>
+                    {{ active ? 'mdi-heart' : 'mdi-heart-outline' }}
+                  </v-icon>
+                </v-btn>
+              </v-img>
+            </v-item>
+          </v-col>
+        </v-row>
+      </v-item-group>
+    </v-container>
+  </v-card>
+</v-container>
 </template>
 
 <script>
@@ -61,7 +83,20 @@ export default {
         text: "Venezuela",
         src: require('../assets/Venezuela.png')
       }
-    ]
+    ],
+    items: [
+        {
+          src: 'backgrounds/bg.jpg',
+        },
+        {
+          src: 'backgrounds/md.jpg',
+        },
+        {
+          src: 'backgrounds/bg-2.jpg',
+        },
+       
+      ],
+      selected: [],
   })
 };
 </script>
