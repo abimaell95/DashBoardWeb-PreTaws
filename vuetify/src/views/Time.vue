@@ -11,7 +11,7 @@
           :items="options"
           label="Select the topic"
         ></v-select>
-
+<p>{{select}}</p>
       </v-col>
     </v-row>
 
@@ -31,20 +31,26 @@ export default {
   data: () => {
     return {
       datacollection: {},
-      select: [],
-      options: [
-        { value: 20, text: "Economía" },
-         {value:10,  text: "Crimen"},
-          {value:25 ,text:"Política"},
-         {value:30 , text:"Corrupción"},
-         {value:35 , text:"Salud"},
-          {value:40 ,text:"Religion"},
-          {value:80 ,text:"Desempleo"},
-         { value:50 ,text:"Educación"},
-         { value:70,text:"Deportes"},
-   
-      ]
-    };
+      loaded: false,
+      pageViews: null,
+      pageViewsByCategory: null,
+      visitors: null,
+      select: " ",
+      options: [ "Crimen","Política","Corrupción",
+    "Salud","Religion", 'Desempleo', 'Educación', "economi",
+    "Deportes"
+    ]
+    }
+  },
+  async created(select) {
+    let resp = await fetch(
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/"+select+".json"
+    );
+    let data = await resp.json();
+    this.pageViews = data.pageViews;
+    this.pageViewsByCategory = data.pageViewsByCategory;
+    this.visitors = data.newVsReturning;
+    this.loaded = true;
   },
 
   methods: {
