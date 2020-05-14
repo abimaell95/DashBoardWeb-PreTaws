@@ -29,9 +29,27 @@
     name: 'VueChartJS',
     components: {
       Radar
-    }, data: () => ({
-      items: [2015,2016,2017,2018],select
-    }),
+    },  data(){
+      return{
+        select:null,
+   
+        items: [
+          { text : 2015,
+            value:Ecuador      
+          },
+          {text : 2016,
+            value:require('../assets/Mexico.jpg',)
+          },
+          {text : 2017,
+           value: require('../assets/Venezuela.jpg',)
+          },
+          {text : 2018,
+           value: require('../assets/Venezuela.jpg',)
+          }
+
+          ]}  
+          
+    },
   }
 </script>
 
