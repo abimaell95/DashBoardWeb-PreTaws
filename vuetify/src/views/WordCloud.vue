@@ -30,7 +30,7 @@ import Ecuador from  "../assets/Ecuador.jpg"
 
     data(){
       return{
-        select:Ecuador,
+        select:Ecuador, //este es el primer valor del select
    
         items: [
           { text : 'Ecuador',
