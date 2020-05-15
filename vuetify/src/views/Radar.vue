@@ -63,17 +63,19 @@ export default {
       datasets: [
         {
           label: "Ecuador",
-          backgroundColor: "#ffd31d",
+          backgroundColor: "#f6f578",
           pointRadius: 0,
-          borderWidth: 1,
+          borderColor: "#fcbf1e",
+          borderWidth: 2,
 
           data: this.Ecuador
         },
         {
           label: "México",
-          backgroundColor: "#00bcd4",
+          backgroundColor: "#b2ebf2",
           pointRadius: 0,
-          borderWidth: 1,
+          borderColor: "#00bcd4",
+          borderWidth: 2,
 
           data: this.Mexico
         },
@@ -81,7 +83,8 @@ export default {
           label: "Venezuela",
           backgroundColor: "#fc7e2f",
           pointRadius: 0,
-          borderWidth: 1,
+          borderColor: "#dd2c00",
+          borderWidth: 2,
 
           data: this.Venezuela
         }
@@ -114,17 +117,19 @@ export default {
       datasets: [
         {
           label: "Ecuador",
-          backgroundColor: "#ffd31d",
+          backgroundColor: "#f6f578",
           pointRadius: 0,
-          borderWidth: 1,
+          borderColor: "#fcbf1e",
+          borderWidth: 2,
 
           data: this.Ecuador
         },
         {
           label: "México",
-          backgroundColor: "#00bcd4",
+          backgroundColor: "#b2ebf2",
           pointRadius: 0,
-          borderWidth: 1,
+          borderColor: "#00bcd4",
+          borderWidth: 2,
 
           data: this.Mexico
         },
@@ -132,7 +137,8 @@ export default {
           label: "Venezuela",
           backgroundColor: "#fc7e2f",
           pointRadius: 0,
-          borderWidth: 1,
+          borderColor: "#dd2c00",
+          borderWidth: 2,
 
           data: this.Venezuela
         }
@@ -145,11 +151,10 @@ export default {
 
 <style>
 .small {
-  max-width: 500px;
-  margin: 150px auto;
+  max-width:450px;
+  margin: 50px auto;
 }
 </style>
-
 
 
 

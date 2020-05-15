@@ -36,7 +36,7 @@ export default {
       loaded:false,
       select: "Crimen",
       options: [ "Crimen","Política","Corrupción",
-    "Salud","Religion", 'Desempleo', 'Educación', "economi",
+    "Salud","Religion", 'Desempleo', 'Educación', "Economía",
     "Deportes"
     ]
     }
