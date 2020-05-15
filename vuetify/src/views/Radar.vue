@@ -5,7 +5,7 @@
     </v-col>
       <v-row justify="center">     
           <v-col class="m-1 text-center" cols="12" >
-            <h2 class="font-weight-bold mb-3 display-3">Bar Plot</h2>
+            <h2 class="font-weight-bold mb-3 display-3">Radar</h2>
           </v-col>
         </v-row>
     <v-row align="center" justify="center">
