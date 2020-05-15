@@ -15,8 +15,11 @@ dataf["fechas"]=fechas
 fechasunicas=dataf.fechas.unique()
 
 ### Graficos de Serie de Tiempo ###
-
-for topics in tipos_uni:
+options= [ "Crimen","Política","Corrupción",
+    "Salud","Religion", 'Desempleo', 'Educación', "economi",
+    "Deportes"
+    ]
+for topics in options:
         d={}
         for paises in country_uni:
                 if paises not in d:
@@ -26,7 +29,6 @@ for topics in tipos_uni:
                         canti=fechas[condi].size     
                         d[paises].append(canti)
                         print(topics[0].upper()+topics[1:])
-                        name=topics[0].upper()+topics[1:]
-                        with open(name+'.json','w') as f:
+                        with open(topics+'.json','w') as f:
                             json.dump(d,f)
 print(d)
