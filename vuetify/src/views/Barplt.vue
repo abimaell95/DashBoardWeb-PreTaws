@@ -12,7 +12,7 @@
           :items="options"
           label="Select the country"
         ></v-select>
-
+<p>{{select}}</p>
       </v-col>
     </v-row>
 
@@ -40,7 +40,7 @@ export default {
   },
 async mounted() {
     let resp = await fetch(
-      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Bar/" +
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/PYTHON/" +
         this.select +
         ".json"
     );
