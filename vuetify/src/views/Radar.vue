@@ -12,7 +12,6 @@
       <v-col class="d-flex text-center" cols="12" sm="6">
         <v-select
           v-model="select"
-          v-on:change="fillData(`${select}`)"
           :items="options"
           label="Select the year"
         ></v-select>
