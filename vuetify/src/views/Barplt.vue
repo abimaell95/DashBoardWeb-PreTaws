@@ -12,7 +12,7 @@
           :items="options"
           label="Select the country"
         ></v-select>
-
+<p>{{select}}</p>
       </v-col>
     </v-row>
 
@@ -32,7 +32,7 @@ export default {
   data: () => {
     return {
       datacollection: {},
-      select: [],
+      select: "Ecuador",
       options: [
     "Ecuador", "México", "Venezuela"
       ]
@@ -40,23 +40,23 @@ export default {
   },
 async mounted() {
     let resp = await fetch(
-      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Bar/" +
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/PYTHON/" +
         this.select +
         ".json"
     );
     let data = await resp.json();
     this.datacollection = {
         labels: [
-          "Crime",
-          "Política",
-          "Corrupcion",
-          "Salud",
-          "Religion",
-          "Desempleo",
-          "Educación",
-          "Deportes",
-          "Economia"
-        ],
+        "Politic",
+        "Salud",
+        "Economia",
+        "Crimen",
+        "Corrupcion",
+        "Educación",
+        "Deportes",
+        "Desempleo",
+        "Religion"
+      ],
         datasets: [
           {
             label: "Positivo",
@@ -94,16 +94,16 @@ async updated()  {
     let data = await resp.json();
     this.datacollection = {
         labels: [
-          "Crime",
-          "Política",
-          "Corrupcion",
-          "Salud",
-          "Religion",
-          "Desempleo",
-          "Educación",
-          "Deportes",
-          "Economia"
-        ],
+        "Politic",
+        "Salud",
+        "Economia",
+        "Crimen",
+        "Corrupcion",
+        "Educación",
+        "Deportes",
+        "Desempleo",
+        "Religion"
+      ],
         datasets: [
           {
             label: "Positivo",
