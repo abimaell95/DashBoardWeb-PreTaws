@@ -3,6 +3,11 @@
     <v-col class="mb-4">
       <h1 class="display-2 font-weight-bold mb-3"></h1>
     </v-col>
+       <v-row justify="center">     
+          <v-col class="m-1 text-center" cols="12" >
+            <h2 class="font-weight-bold mb-3 display-3">Time Series</h2>
+          </v-col>
+        </v-row>
     <v-row align="center" justify="center">
       <v-col class="d-flex text-center" cols="12" sm="6">
         <v-select
@@ -10,7 +15,6 @@
           :items="options"
           label="Select the topic"
         ></v-select>
-        <p>{{select}}</p>
       </v-col>
     </v-row>
 
@@ -30,9 +34,6 @@ export default {
   data: () => {
     return {
       datacollection:{},
-      Ecuador:[],
-      Venezuela:[],
-      Mexico:[],
       loaded:false,
       select: "Crimen",
       options: [ "Crimen","Política","Corrupción",
@@ -47,10 +48,6 @@ export default {
       "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/"+this.select+".json"
       )
     let data = await resp.json();
-    this.Ecuador = data.Ecuador;
-    this.Mexico = data.Mexico;
-    this.Venezuela = data.Venezuela;
-    this.loaded = true;
     this.datacollection = {
         labels: [
           "2015",
@@ -63,7 +60,7 @@ export default {
               label: 'Ecuador',
               backgroundColor: "transparent",
               borderColor: "#ffd31d",
-              data: this.Ecuador,
+              data: data.Ecuador,
           },
            {
               label: 'Mexico',
@@ -71,7 +68,7 @@ export default {
               backgroundColor: "transparent",
               borderColor: "rgba(00,200,0,0.6)",
               pointBorderColor: '#249EBF',
-              data: this.Mexico
+              data: data.Mexico
               },
           {
             label: 'Venezuela',
@@ -80,7 +77,7 @@ export default {
               borderColor: "rgba(0,0,200,0.6)",
               pointBorderColor: '#250EBF',
               
-              data: this.Venezuela
+              data: data.Venezuela
           }
         ]
       };
@@ -90,10 +87,6 @@ export default {
       "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Series/"+this.select+".json"
       )
     let data = await resp.json();
-    this.Ecuador = data.Ecuador;
-    this.Mexico = data.Mexico;
-    this.Venezuela = data.Venezuela;
-    this.loaded = true;
     this.datacollection = {
         labels: [
           "2015",
@@ -106,7 +99,7 @@ export default {
               label: 'Ecuador',
               backgroundColor: "transparent",
               borderColor: "#ffd31d",
-              data: this.Ecuador,
+              data: data.Ecuador,
           },
            {
               label: 'Mexico',
@@ -114,7 +107,7 @@ export default {
               backgroundColor: "transparent",
               borderColor: "rgba(00,200,0,0.6)",
               pointBorderColor: '#249EBF',
-              data: this.Mexico
+              data: data.Mexico
               },
           {
             label: 'Venezuela',
@@ -123,7 +116,7 @@ export default {
               borderColor: "rgba(0,0,200,0.6)",
               pointBorderColor: '#250EBF',
               
-              data: this.Venezuela
+              data: data.Venezuela
           }
         ]
       };
@@ -134,7 +127,9 @@ export default {
 
 <style>
 .small {
-  max-width: 900px;
-  margin: 150px auto;
+ 
+  margin: 10px auto;
+  max-width: 450px;
+
 }
 </style>

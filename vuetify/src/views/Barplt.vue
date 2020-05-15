@@ -34,16 +34,18 @@ export default {
       datacollection: {},
       select: [],
       options: [
-        { value: 20, text: "Ecuador" },
-        { value: 60, text: "Venezuela" },
-        { value: 50, text: "México" }
+    "Ecuador", "México", "Venezuela"
       ]
     };
   },
-
-  methods: {
-    fillData(valor) {
-      this.datacollection = {
+async mounted() {
+    let resp = await fetch(
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Bar/" +
+        this.select +
+        ".json"
+    );
+    let data = await resp.json();
+    this.datacollection = {
         labels: [
           "Crime",
           "Política",
@@ -62,18 +64,7 @@ export default {
             pointBackgroundColor: "white",
             borderWidth: 2,
             pointBorderColor: "#249EBF",
-            //Data to be represented on y-axis
-            data: [
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor
-            ]
+            data: data.Positivo
           },
           {
             label: "Neutro",
@@ -81,17 +72,7 @@ export default {
             pointBackgroundColor: "white",
             borderWidth: 2,
             pointBorderColor: "#249EBF",
-            data: [
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor
-            ]
+            data: data.Neutro
           },
           {
             label: "Negativo",
@@ -99,25 +80,59 @@ export default {
             pointBackgroundColor: "white",
             borderWidth: 2,
             pointBorderColor: "#249EBF",
-            data: [
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor
-            ]
+            data: data.Negativo
           }
         ]
       };
-
-      //Chart.js options that controls the appearance of the chart
-    }
+  },
+async updated()  {
+    let resp = await fetch(
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Bar/" +
+        this.select +
+        ".json"
+    );
+    let data = await resp.json();
+    this.datacollection = {
+        labels: [
+          "Crime",
+          "Política",
+          "Corrupcion",
+          "Salud",
+          "Religion",
+          "Desempleo",
+          "Educación",
+          "Deportes",
+          "Economia"
+        ],
+        datasets: [
+          {
+            label: "Positivo",
+            backgroundColor: "#249EBF",
+            pointBackgroundColor: "white",
+            borderWidth: 2,
+            pointBorderColor: "#249EBF",
+            data: data.Positivo
+          },
+          {
+            label: "Neutro",
+            backgroundColor: "#746A68",
+            pointBackgroundColor: "white",
+            borderWidth: 2,
+            pointBorderColor: "#249EBF",
+            data: data.Neutro
+          },
+          {
+            label: "Negativo",
+            backgroundColor: "#ff8000",
+            pointBackgroundColor: "white",
+            borderWidth: 2,
+            pointBorderColor: "#249EBF",
+            data: data.Negativo
+          }
+        ]
+      };
   }
-};
+}
 </script>
 
 <style>

@@ -30,9 +30,6 @@ export default {
   data: () => {
     return {
       datacollection: {},
-      Ecuador: [],
-      Venezuela: [],
-      Mexico: [],
       select: "2015",
       options: ["2015", "2016", "2017", "2018"]
     };
@@ -44,11 +41,7 @@ export default {
         ".json"
     );
     let data = await resp.json();
-    this.Ecuador = data.Ecuador;
-    this.Mexico = data.Mexico;
-    this.Venezuela = data.Venezuela;
-    this.loaded = true;
-    this.datacollection = this.datacollection = {
+    this.datacollection = {
       labels: [
         "Política",
         "Salud",
@@ -68,7 +61,7 @@ export default {
           borderColor: "#fcbf1e",
           borderWidth: 2,
 
-          data: this.Ecuador
+          data: data.Ecuador
         },
         {
           label: "México",
@@ -77,7 +70,7 @@ export default {
           borderColor: "#00bcd4",
           borderWidth: 2,
 
-          data: this.Mexico
+          data: data.Mexico
         },
         {
           label: "Venezuela",
@@ -86,7 +79,7 @@ export default {
           borderColor: "#dd2c00",
           borderWidth: 2,
 
-          data: this.Venezuela
+          data: data.Venezuela
         }
       ]
     };
@@ -98,11 +91,7 @@ export default {
         ".json"
     );
     let data = await resp.json();
-    this.Ecuador = data.Ecuador;
-    this.Mexico = data.Mexico;
-    this.Venezuela = data.Venezuela;
-    this.loaded = true;
-    this.datacollection = this.datacollection = {
+    this.datacollection = {
       labels: [
         "Política",
         "Salud",
@@ -122,7 +111,7 @@ export default {
           borderColor: "#fcbf1e",
           borderWidth: 2,
 
-          data: this.Ecuador
+          data: data.Ecuador
         },
         {
           label: "México",
@@ -131,7 +120,7 @@ export default {
           borderColor: "#00bcd4",
           borderWidth: 2,
 
-          data: this.Mexico
+          data: data.Mexico
         },
         {
           label: "Venezuela",
@@ -140,7 +129,7 @@ export default {
           borderColor: "#dd2c00",
           borderWidth: 2,
 
-          data: this.Venezuela
+          data: data.Venezuela
         }
       ]
     };
