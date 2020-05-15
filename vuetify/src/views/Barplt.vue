@@ -34,7 +34,7 @@ export default {
       datacollection: {},
       select: "Ecuador",
       options: [
-    "Ecuador", "México", "Venezuela"
+    "Ecuador",{value:"Mexico", text: "México"}, "Venezuela"
       ]
     };
   },
@@ -94,15 +94,9 @@ async updated()  {
     let data = await resp.json();
     this.datacollection = {
         labels: [
-        "Politic",
-        "Salud",
-        "Economia",
-        "Crimen",
-        "Corrupcion",
-        "Educación",
-        "Deportes",
-        "Desempleo",
-        "Religion"
+      "Crime", "Politics", "Corruption",
+     "Health", "Religion", 'Unemployment', 'Education', "Economy",
+     "Sports"
       ],
         datasets: [
           {
