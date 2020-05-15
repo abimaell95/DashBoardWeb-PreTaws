@@ -12,10 +12,8 @@
           :items="options"
           label="Select the year"
         ></v-select>
-
       </v-col>
     </v-row>
-
     <div class="small">
       <Radar :chart-data="datacollection"></Radar>
     </div>
@@ -32,94 +30,131 @@ export default {
   data: () => {
     return {
       datacollection: {},
-      select: [],
-      options: [
-        { value: 20, text: "2015" },
-        { value: 60, text: "2016" },
-        { value: 50, text: "2017" },
-        { value: 80, text: "2018" }
+      Ecuador: [],
+      Venezuela: [],
+      Mexico: [],
+      select: "2015",
+      options: ["2015", "2016", "2017", "2018"]
+    };
+  },
+  async mounted() {
+    let resp = await fetch(
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Radar/" +
+        this.select +
+        ".json"
+    );
+    let data = await resp.json();
+    this.Ecuador = data.Ecuador;
+    this.Mexico = data.Mexico;
+    this.Venezuela = data.Venezuela;
+    this.loaded = true;
+    this.datacollection = this.datacollection = {
+      labels: [
+        "Política",
+        "Salud",
+        "Economia",
+        "Crimen",
+        "Corrupcion",
+        "Educación",
+        "Deportes",
+        "Desempleo",
+        "Religion"
+      ],
+      datasets: [
+        {
+          label: "Ecuador",
+          backgroundColor: "#f6f578",
+          pointRadius: 0,
+          borderColor: "#fcbf1e",
+          borderWidth: 2,
+
+          data: this.Ecuador
+        },
+        {
+          label: "México",
+          backgroundColor: "#b2ebf2",
+          pointRadius: 0,
+          borderColor: "#00bcd4",
+          borderWidth: 2,
+
+          data: this.Mexico
+        },
+        {
+          label: "Venezuela",
+          backgroundColor: "#fc7e2f",
+          pointRadius: 0,
+          borderColor: "#dd2c00",
+          borderWidth: 2,
+
+          data: this.Venezuela
+        }
       ]
     };
   },
+  async updated() {
+    let resp = await fetch(
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Radar/" +
+        this.select +
+        ".json"
+    );
+    let data = await resp.json();
+    this.Ecuador = data.Ecuador;
+    this.Mexico = data.Mexico;
+    this.Venezuela = data.Venezuela;
+    this.loaded = true;
+    this.datacollection = this.datacollection = {
+      labels: [
+        "Política",
+        "Salud",
+        "Economia",
+        "Crimen",
+        "Corrupcion",
+        "Educación",
+        "Deportes",
+        "Desempleo",
+        "Religion"
+      ],
+      datasets: [
+        {
+          label: "Ecuador",
+          backgroundColor: "#f6f578",
+          pointRadius: 0,
+          borderColor: "#fcbf1e",
+          borderWidth: 2,
 
-  methods: {
-    fillData(valor) {
-      this.datacollection = {
-        labels: [
-          "Crime",
-          "Política",
-          "Corrupcion",
-          "Salud",
-          "Religion",
-          "Desempleo",
-          "Educación",
-          "Deportes",
-          "Economia"
-        ],
-        datasets: [
-          {
-            label: 'Positivo',
-            backgroundColor: "#a6b1e1",
-            pointBackgroundColor: "white",
-            borderWidth: 2,
-            pointBorderColor: "#249EBF",
-                        //Data to be represented on y-axis
-              data: [valor,valor,valor,valor,valor,valor,valor,valor,valor],
-            
-          },
-          {
-            label: "Neutro",
-            backgroundColor: "##dcd6f7",
-            pointBackgroundColor: "white",
-            borderWidth: 2,
-            pointBorderColor: "#249EBF",
-            data: [
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor
-            ]
-          },
-          {
-            label: "Negativo",
-            backgroundColor: "#323232",
-            pointBackgroundColor: "white",
-            borderWidth: 2,
-            pointBorderColor: "#249EBF",
-            data: [
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor,
-              valor
-            ]
-          }
-        ]
-      };
+          data: this.Ecuador
+        },
+        {
+          label: "México",
+          backgroundColor: "#b2ebf2",
+          pointRadius: 0,
+          borderColor: "#00bcd4",
+          borderWidth: 2,
 
-      //Chart.js options that controls the appearance of the chart
-    }
+          data: this.Mexico
+        },
+        {
+          label: "Venezuela",
+          backgroundColor: "#fc7e2f",
+          pointRadius: 0,
+          borderColor: "#dd2c00",
+          borderWidth: 2,
+
+          data: this.Venezuela
+        }
+      ]
+    };
   }
+  //Chart.js options that controls the appearance of the chart
 };
 </script>
 
 <style>
 .small {
-  max-width: 500px;
-  margin: 150px auto;
+  max-width:450px;
+  margin: 50px auto;
 }
- 
 </style>
-
 
 
 
