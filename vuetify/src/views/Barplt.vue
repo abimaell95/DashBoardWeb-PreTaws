@@ -32,7 +32,7 @@ export default {
   data: () => {
     return {
       datacollection: {},
-      select: [],
+      select: "Ecuador",
       options: [
     "Ecuador", "México", "Venezuela"
       ]
@@ -47,16 +47,16 @@ async mounted() {
     let data = await resp.json();
     this.datacollection = {
         labels: [
-          "Crime",
-          "Política",
-          "Corrupcion",
-          "Salud",
-          "Religion",
-          "Desempleo",
-          "Educación",
-          "Deportes",
-          "Economia"
-        ],
+        "Politic",
+        "Salud",
+        "Economia",
+        "Crimen",
+        "Corrupcion",
+        "Educación",
+        "Deportes",
+        "Desempleo",
+        "Religion"
+      ],
         datasets: [
           {
             label: "Positivo",
@@ -94,16 +94,16 @@ async updated()  {
     let data = await resp.json();
     this.datacollection = {
         labels: [
-          "Crime",
-          "Política",
-          "Corrupcion",
-          "Salud",
-          "Religion",
-          "Desempleo",
-          "Educación",
-          "Deportes",
-          "Economia"
-        ],
+        "Politic",
+        "Salud",
+        "Economia",
+        "Crimen",
+        "Corrupcion",
+        "Educación",
+        "Deportes",
+        "Desempleo",
+        "Religion"
+      ],
         datasets: [
           {
             label: "Positivo",
