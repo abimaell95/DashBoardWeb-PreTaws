@@ -136,7 +136,7 @@ async updated()  {
 <style>
 .small {
   max-width: 500px;
-  margin: 150px auto;
+  margin: 10px auto;
 }
  
 </style>
