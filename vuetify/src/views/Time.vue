@@ -36,9 +36,10 @@ export default {
       datacollection:{},
       loaded:false,
       select: "Crimen",
-      options:["Crime", "Politics", "Corruption",
-     "Health", "Religion", 'Unemployment', 'Education', "Economy",
-     "Sports"]
+      options:[{value: "Crimen",text:"Crime"}, {value: "Política",text:"Politic"}, {value: "Corrupción",text:"Corruption"},
+     {value: "Salud",text:"Health"},{value: "Religión",text: "Religion"}, {value: "Desempleo",text:'Unemployment'}, 
+{value: "Educación",text:'Education'}, {value: "Economía",text:"Economy"},
+     {value: "Deportes",text:"Sports"}]
     }
   },
  
