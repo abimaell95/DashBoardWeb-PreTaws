@@ -18,19 +18,19 @@ array = np.array(["positivo", "neutro", "negativo"])
 d = {}
 m = []
 for elem in df.country.unique():
-    if elem not in d:
-        d[elem] = {}
-    d[elem]["Positivo"]=[]
-    d[elem]["Neutro"] =[]
-    d[elem]["Negativo"] =[]
+    # if elem not in d:
+    #     d[elem] = {}
+    # d[elem]["Positivo"]=[]
+    # d[elem]["Neutro"] =[]
+    # d[elem]["Negativo"] =[]
     a=0;b=0;c=0
     for tipos in df.cnn_prediction.unique():
         negativo = df.polaridad[(df.polaridad < 0) & (df.country == elem) & (df.cnn_prediction == tipos)].size
         positivo = df.polaridad[(df.polaridad > 0) & (df.country == elem) & (df.cnn_prediction == tipos)].size
         neutro = df.polaridad[(df.polaridad == 0) & (df.country == elem) & (df.cnn_prediction == tipos)].size
-        d[elem]["Positivo"].append(positivo)
-        d[elem]["Neutro"].append(neutro)
-        d[elem]["Negativo"].append(negativo)
+        # d[elem]["Positivo"].append(positivo)
+        # d[elem]["Neutro"].append(neutro)
+        # d[elem]["Negativo"].append(negativo)
         a = [positivo, neutro, negativo]
         m.append(a)
 print(d)
@@ -43,15 +43,12 @@ d2={}
 N=3 #NUMERO DE PAISES
 F=3 #NUMERO DE SENTIMIENTO
 for i,elem in enumerate(paises) :
-    if elem not in d2:
-        d2[elem]={}
     matrizPais= transpuesta[:,9*(i):9*(i+1)]
     totalPais= np.sum(matrizPais,axis=0)
-
     for j,senti in enumerate(feelings):
-        if senti not in d[elem]:
-            d2[elem][senti]=0
+        if senti not in d2:
+            d2[senti]=0
         fPaisP= (matrizPais[j]*100)/totalPais
-        d2[elem][senti]=list(np.around(fPaisP,decimals= 3))
+        d2[senti]=list(np.around(fPaisP,decimals= 3))
         with open(elem+'.json','w') as f:
             json.dump(d2,f)
