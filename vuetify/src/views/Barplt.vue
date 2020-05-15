@@ -40,7 +40,7 @@ export default {
   },
 async mounted() {
     let resp = await fetch(
-      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/PYTHON/" +
+      "https://raw.githubusercontent.com/abimaell95/DashBoardWeb-PreTaws/master/Bar/" +
         this.select +
         ".json"
     );
