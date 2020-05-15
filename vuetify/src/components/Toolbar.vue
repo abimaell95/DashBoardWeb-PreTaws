@@ -17,7 +17,7 @@
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
                     <v-list>
-                        <v-list-item-group v-model="model">
+                        <v-list-item-group>
                           
                           <v-list-item v-for="(item, i) in items" :key="i">
                             <v-list-item-icon>
@@ -46,7 +46,7 @@
                   </v-expansion-panel-header>
                 <v-expansion-panel-content>
                     <v-list>
-                        <v-list-item-group v-model="model">
+                        <v-list-item-group>
                             <v-list-item v-for="(item, i) in itemssm" :key="i" >
                             <v-list-item-icon>
                                 <v-icon v-text="item.icon"></v-icon>
@@ -139,14 +139,7 @@
           rutas:'/wc'
           
         },
-    ],
-      names : 
-      [ 
-        {texto: 'Typs of Chart',icono:'mdi-graph'},
-        {texto:"Social Media" ,icono:'mdi-account-group'}
-      ],
-     model:1,
-     
+    ]
 
     })
   

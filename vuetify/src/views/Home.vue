@@ -42,7 +42,7 @@
   </v-section>
    <v-card max-width="1000" class="mx-auto" >
     <v-container class="pa-1">
-      <v-item-group v-model="selected" multiple >
+      <v-item-group multiple >
         <v-row>
           <v-col v-for="(item, i) in items" :key="i" cols="12" md="4" >
             <v-item v-slot:default="{ active, toggle }">
@@ -96,8 +96,7 @@ export default {
           src: 'backgrounds/bg-2.jpg',
         },
        
-      ],
-      selected: [],
+      ]
   })
 };
 </script>
