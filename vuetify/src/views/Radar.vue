@@ -3,7 +3,11 @@
     <v-col class="mb-4">
       <h1 class="display-2 font-weight-bold mb-3"></h1>
     </v-col>
-    <br />
+      <v-row justify="center">     
+          <v-col class="m-1 text-center" cols="12" >
+            <h2 class="font-weight-bold mb-3 display-3">Bar Plot</h2>
+          </v-col>
+        </v-row>
     <v-row align="center" justify="center">
       <v-col class="d-flex text-center" cols="12" sm="6">
         <v-select

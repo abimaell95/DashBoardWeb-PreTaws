@@ -9,11 +9,6 @@ Vue.use(VueRouter)
     component: () => import('../views/Home.vue')
   },
   {
-    path: '/botones',
-    name: 'botones',
-   component: () => import('../views/Botones.vue')
-  },
-  {
     path: '/wc',
     name: 'WordCloud',
    component: () => import('../views/WordCloud.vue')
