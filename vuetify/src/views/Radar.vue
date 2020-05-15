@@ -43,7 +43,7 @@ export default {
     let data = await resp.json();
     this.datacollection = {
       labels: [
-        "Política",
+        "Politic",
         "Salud",
         "Economia",
         "Crimen",
@@ -93,7 +93,7 @@ export default {
     let data = await resp.json();
     this.datacollection = {
       labels: [
-        "Política",
+        "Politic",
         "Salud",
         "Economia",
         "Crimen",

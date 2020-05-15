@@ -11,14 +11,14 @@
       <v-col class="mb-4" cols="12" sm="6" offset-sm="3">
         <h1 class="display-2 font-weight-bold mb-3"></h1>
 
-        <h2 class="subheading font-weight-regular">
-          Bienvenido al dashboard  de noticias relevantes en
-          países de América Latina
-        </h2>
+        <h1 class="subheading font-weight-regular">
+    Welcome to the relevant news Dashboard at
+           Latin American countries
+        </h1>
       </v-col>
 
       <v-col class="mb-1" cols="6" sm="6" offset-sm="3">
-        <h1 class="headline font-weight-bold mb-3">Países</h1>
+        <h1 class="headline font-weight-bold mb-3">Countries</h1>
          <v-row justify="center" >
               <v-col v-for="(item,i) in paises" :key="i"  sm="4">
                 <v-img :src="item.src" :alt="item.text" class="my-2" contain height="80">
@@ -29,7 +29,7 @@
       </v-col>
       <br>
       <v-col class="mb-5" cols="12">
-        <h1 class="headline font-weight-bold mb-3">Tópicos</h1>
+        <h1 class="headline font-weight-bold mb-3">Topics</h1>
     <br>
         <v-row justify="center" class="mb-5" cols="12">
           <p v-for="(link, i) in temas" :key="i" class="grey--text mx-3">{{ link}}</p>
@@ -67,9 +67,9 @@ export default {
   name: "Home",
 
   data: () => ({
-    temas: [ "Crimen","Política","Corrupción",
-    "Salud","Religion", 'Desempleo', 'Educación', "Economía",
-    "Deportes"
+    temas: ["Crime", "Politics", "Corruption",
+     "Health", "Religion", 'Unemployment', 'Education', "Economy",
+     "Sports"
     ],
     paises: [
       {
@@ -77,7 +77,7 @@ export default {
         src: require('../assets/Ecuador.png')
       },
       {
-        text: "Mexico",
+        text: "México",
         src: require('../assets/Mexico.png')
       },
       {
