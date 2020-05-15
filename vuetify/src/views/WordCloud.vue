@@ -7,7 +7,7 @@
       </v-col>
         <v-row justify="center">     
           <v-col class="m-1 text-center" cols="12" >
-            <h2 class="font-weight-bold mb-3 display-3">Word Cloud</h2>
+            <h2 class="font-weight-bold mb-1 display-3">Word Cloud</h2>
           </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -17,7 +17,7 @@
     
         </v-row>   
       
-    <v-img :src=select alt="km" class="my-1" contain height="500" />
+    <v-img :src=select alt="km" class="my-1" contain height="520" />
 </v-container>
 
 

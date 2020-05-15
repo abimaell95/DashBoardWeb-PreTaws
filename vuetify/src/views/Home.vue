@@ -4,18 +4,15 @@
     <v-row class="text-center">
       <v-col cols="12">
         <br>
-        <br>
-        <br>
       </v-col>
 
-      <v-col class="mb-4" cols="12" sm="6" offset-sm="3">
-        <h1 class="display-2 font-weight-bold mb-3"></h1>
+      <v-row class="mb-4" cols="12" sm="6" offset-sm="3">
 
         <h1 class="subheading font-weight-regular">
     Welcome to the relevant news Dashboard at
            Latin American countries
         </h1>
-      </v-col>
+      </v-row>
 
       <v-col class="mb-1" cols="6" sm="6" offset-sm="3">
         <h1 class="headline font-weight-bold mb-3">Countries</h1>
@@ -29,10 +26,9 @@
       </v-col>
       <br>
       <v-col class="mb-5" cols="12">
-        <h1 class="headline font-weight-bold mb-3">Topics</h1>
-    <br>
+        <h1 class="display-2 font-weight-bold mb-3">Topics</h1>
         <v-row justify="center" class="mb-5" cols="12">
-          <p v-for="(link, i) in temas" :key="i" class="grey--text mx-3">{{ link}}</p>
+          <h5 v-for="(link, i) in temas" :key="i" class="grey--text mx-3">{{ link}}</h5>
         </v-row>
       </v-col>
 
@@ -40,25 +36,20 @@
     </v-row>
     
   </v-section>
-   <v-card max-width="1000" class="mx-auto" >
-    <v-container class="pa-1">
-      <v-item-group multiple >
-        <v-row>
-          <v-col v-for="(item, i) in items" :key="i" cols="12" md="4" >
-            <v-item v-slot:default="{ active, toggle }">
-              <v-img :src="`https://cdn.vuetifyjs.com/images/${item.src}`" height="150"  class="text-right pa-2" @click="toggle" >
-                <v-btn icon dark >
-                  <v-icon>
-                    {{ active ? 'mdi-heart' : 'mdi-heart-outline' }}
-                  </v-icon>
-                </v-btn>
-              </v-img>
-            </v-item>
-          </v-col>
-        </v-row>
-      </v-item-group>
-    </v-container>
+  <v-row>
+  <v-card v-for="(item,i) in items" :key="i" class="mx-auto " max-width="350" outlined >
+    <v-list-item :class="item.color">
+      <v-list-item-content  >
+             <div> <v-icon dark>{{item.icon}}</v-icon></div>
+        <v-list-item-title class="display-2 mb-1 white--text" align="right" > {{item.label}}</v-list-item-title>
+        <v-list-item-subtitle align="right" class="white--text">More Publication</v-list-item-subtitle>
+        <v-list-item-subtitle align="right" class="display-1 white--text">{{item.text}} </v-list-item-subtitle>
+
+      </v-list-item-content>
+
+    </v-list-item>
   </v-card>
+  </v-row>
 </v-container>
 </template>
 
@@ -87,13 +78,22 @@ export default {
     ],
     items: [
         {
-          src: 'backgrounds/bg.jpg',
+          label :'Country ',
+          text: 'Mexico',
+          icon: 'mdi-google-maps',
+          color: 'blue-grey darken-3'
         },
         {
-          src: 'backgrounds/md.jpg',
+          label :'Month',
+          text: 'August - 489 ',
+          icon: 'mdi-calendar',
+          color: 'blue-grey darken-2'
         },
         {
-          src: 'backgrounds/bg-2.jpg',
+          label :'Year',
+          text: '2017 - 1347',
+          icon: 'mdi-newspaper',
+          color: 'blue-grey darken-3'
         },
        
       ]

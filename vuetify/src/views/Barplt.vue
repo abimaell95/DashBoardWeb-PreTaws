@@ -15,13 +15,12 @@
           :items="options"
           label="Select the country"
         ></v-select>
-<p>{{select}}</p>
       </v-col>
     </v-row>
 
     <div class="small">
-      <Chart :chart-data="datacollection"></Chart>
-    </div>
+      <Chart :chart-data="datacollection" ></Chart>
+          </div>
   </v-container>
 </template>
 
@@ -86,7 +85,7 @@ async mounted() {
             data: data.Negativo
           }
         ]
-      };
+      }
   },
 async updated()  {
     let resp = await fetch(
@@ -126,16 +125,16 @@ async updated()  {
             pointBorderColor: "#249EBF",
             data: data.Negativo
           }
-        ]
-      };
+        ]   
+      }
   }
 }
 </script>
 
 <style>
 .small {
-  max-width: 500px;
-  margin: 10px auto;
+  max-width: 700px;
+  margin: 10px 350px;
 }
  
 </style>

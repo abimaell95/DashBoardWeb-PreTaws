@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container dark>
     <v-col class="mb-4">
       <h1 class="display-2 font-weight-bold mb-3"></h1>
     </v-col>
@@ -10,7 +10,7 @@
         </v-row>
     <v-row align="center" justify="center">
       <v-col class="d-flex text-center" cols="12" sm="6">
-        <v-select
+        <v-select 
           v-model="select"
           :items="options"
           label="Select the year"
@@ -143,8 +143,9 @@ export default {
 
 <style>
 .small {
-  max-width:450px;
-  margin: 50px auto;
+  max-width: 700px;
+  margin: 20px 350px;
 }
+ 
 </style>
 
